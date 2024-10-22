@@ -1,0 +1,326 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200&display=swap');
+
+
+#dashboard 
+{
+    position: relative;
+    background: $primary-color;
+    width: 100%;
+    .dashboard_inner 
+    {
+       &-sidebar 
+       {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 20rem;
+        height: 100vh;
+        background: $primary-color;
+        border-right: 0.01rem solid $light-color-4;
+        @include box-shadow($shadow);
+        z-index: 1000;
+        @include transition(0.3s ease);
+        nav 
+        {
+            display: flex;
+            padding-top: 2rem;
+            align-items: center;
+            flex-direction: column;
+            justify-content: flex-start;
+            height: 100%;
+            width: 100%;
+            gap: 2rem;
+            ul 
+            {
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                li 
+                {
+                    
+                    width: 100%;
+                    padding: 0;
+                    a 
+                    {
+                        border-bottom: 0.1rem solid $light-color-1;
+                        border-top: 0.1rem solid $dark-color-1;
+                        font-size: 1.2rem;
+                        padding-left: 2rem;
+                        display: flex;
+                        @include transition(0s);
+                        align-items: center;
+                        height: 4rem;
+                        margin-bottom: 0rem;
+                        border-left: 0.2rem solid transparent;
+                        gap: 1rem;
+                        color: $light-color-6;
+                        &:hover 
+                        {
+                            color: $light-color;
+                            background: $secondary-color;
+                            border-right: 0.2rem solid $light-color;
+                            
+                        }
+                        &.active 
+                        {
+                            background: $secondary-color;
+                            color: $light-color;
+                            border-right: 0.2rem solid $light-color;
+                        }
+                        &.active .dash_icon
+                        {
+                            filter: invert(1);
+                        }
+                        &:hover .dash_icon 
+                        {
+                            filter: invert(1);
+                            @include transition(0s);
+                        }
+                        .dash_icon 
+                        {
+                            filter: invert(0.8);
+                            width: 2rem;
+                            height: 2rem;
+                            @include transition(0s);
+                        }
+                        span 
+                        {
+                            display: block;
+                        }
+                        i 
+                        {
+                            color: $light-color-8;
+                            font-size: 2rem;
+                        }
+                    }
+                }
+            }
+        }
+        &.active 
+        {
+            left: -100%;
+            @include transition(0.2s ease);
+        }
+       }
+       &-showcase 
+       {
+        width: calc(100% - 20rem);
+        height: 100vh;
+        margin-left:20rem;
+        background: $secondary-color;
+        @include transition(0.2s ease);
+
+        &.active 
+        {
+            width: 100%;
+            margin-left: 0;
+            @include transition(0.5s ease);
+        }
+        header 
+        {
+            position: fixed;
+            top: 0;
+            right: 0;
+            z-index: 10;
+            width: calc(100% - 20rem);
+            display: flex;
+            background: $primary-color;
+            backdrop-filter: blur(50rem);
+            border-bottom: 1px solid $light-color-4;
+            align-items: center;
+            justify-content: space-between;
+            padding:  0 1.5rem;
+            height: 4.5rem;
+            gap: 1rem;
+            .header_title {
+                flex: 1;
+            }
+            &.active
+            {
+                width: 100%;
+                @include transition(0.2s ease);
+
+            }
+            #icon 
+            {
+                width: 3.5rem;
+                height: 3.5rem;
+                background: $light-color-6;
+                @include border-radius(50%);
+                border: 0.1rem solid $light-color-4;
+                @extend .flex_center;
+                cursor: pointer;
+                &:hover 
+                {
+                    color: $light-color;
+                    background: $dark-color;
+                }
+                &:active 
+                {
+                    @include box-shadow(0 0 0 0.2rem $light-color-2);
+                    @include transform(scale(0.9));
+                }
+                i 
+                {
+                    font-size: 1.8rem;
+                }
+            }
+            .profile_area 
+            {
+                align-items: center;
+                gap: 1rem;
+                .notification 
+                {
+                    position: relative;
+                    cursor: pointer;
+                    i 
+                    {
+                        font-size: 2rem;
+                        color: $light-color;
+                        margin-right: 1rem;
+                    }
+                    .count_number 
+                    {
+                        position: absolute;
+                        top: -1rem;
+                        right: 0.3rem;
+                        font-size: 1rem;
+                        background: $secondary-color;
+                        width: 1.5rem;
+                        height: 1.5rem;
+                        @extend .flex_center;
+                        
+                        color: $light-color;
+                        @include border-radius(50%);
+                    }
+                }
+                .profile 
+                {
+                    position: relative;
+                    display: flex;
+                    gap: 0.5rem;
+                    align-items: center;
+                    cursor: pointer;
+                    &:active img
+                    {
+                        @include box-shadow(0 0 0 0.2rem $light-color-2);
+                        @include transform(scale(0.9));
+                    }
+                    .dropdown 
+                    {
+                        position: absolute;
+                        top: 116%;
+                        left: -100%;
+                        background: $primary-color;
+                        width: 10rem;
+                        backdrop-filter: blur(1rem);
+                        display: none;
+                        overflow: hidden;
+                        text-align: center;
+                        z-index: 1000000;
+                        @include border-radius(0 0 1rem 1rem);
+                        ul 
+                        {
+                            margin: 0;
+                            padding: 0;
+                            li 
+                            {
+                                list-style: none;
+                                &:last-child a
+                                {
+                                    border-bottom: 0;
+                                }
+                                a 
+                                {
+                                    padding: 1rem 0;
+                                    border-bottom: 1px solid $light-color-2;
+                                    border-top: 1px solid $dark-color-2;
+                                    display: block;
+                                    color: $light-color;
+                                    @include transition(0.2s);
+                                    i 
+                                    {
+                                        color: $light-color;
+                                    }
+                                    &:hover 
+                                    {
+                                        background: $light-color;
+                                        color: $dark-color;
+                                    }
+                                    &:hover i
+                                    {
+                                        color: $dark-color;
+                                        @include transition(0s);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    img 
+                    {
+                        width: 3.5rem;
+                        @include border-radius(50%);
+                        @include box-shadow(0 0 0 0.1rem $light-color-6);
+                    }
+                    i 
+                    {
+                        color: $light-color;
+                    }
+                }
+            }
+           
+           
+        }
+        .business_card-preview 
+        {
+            position: relative;
+            @extend .flex_center;
+            min-height: 100%;
+            font-family: "Raleway", sans-serif;
+            .businesscard 
+            {
+                position: relative;
+                background: rgb(215,78,95);
+                background: linear-gradient(122deg, rgba(215,78,95,1) 0%, rgba(253,157,176,1) 100%);
+                 border-radius:15px;
+                  width: 550px;
+                  height: 350px;
+                  @extend .flex_center;
+                  flex-direction: column;
+                  &_inner 
+                  {
+                    padding: 1rem;
+                    img 
+                    {
+                        position: absolute;
+                        top: 1rem;
+                        left: 1rem;
+                        width: 8rem;
+                    }
+                    .content 
+                    {
+                        h1 
+                        {
+                            font-size: clamp(1.2rem , 2vw , 1.6rem);
+                            text-align: center;
+                            font-weight: 500;
+                            margin-bottom: 0.5rem;
+                        }
+                        h3 
+                        {
+                            font-size: clamp(1.2rem , 2vw , 1.6rem);
+                            font-weight: 300;
+                            text-transform: uppercase;
+                            text-align: center;
+                            margin-bottom: 0;
+                            color: $light-color-8;
+                        }
+                    }
+                  }
+            }
+        } 
+
+       }
+    }
+}
+

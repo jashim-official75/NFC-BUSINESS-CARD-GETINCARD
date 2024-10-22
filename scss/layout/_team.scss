@@ -1,0 +1,114 @@
+#team_of_getinconnect {
+    position: relative;
+    background: $primary-color;
+  h2 
+  {
+    margin-bottom: 10rem;
+  }
+      .profile-card {
+        position: relative;
+        @include border-radius(1.5rem);
+        transition: .6s;
+        // width: 20rem;
+        height: 20rem;
+        &:hover {
+          @include border-radius(1.5rem);
+        }
+        margin: 2rem 0;
+  
+        .img {
+          position: relative;
+          transition: .6s;
+          z-index: 99;
+           
+          img {
+            position: relative;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            height: 100%;
+            @include border-radius(1rem);
+            user-select: none;
+            object-fit: cover;
+            width: 100%;
+          }
+        }
+        &:hover 
+        {
+            background: $secondary-color;
+        }
+        &:hover .img  {
+          transform: translateY(-50px) scale(0.6);
+        }
+        &:hover  img 
+        {
+          @include border-radius(50%);
+        }
+        &:hover  .caption 
+        {
+          transform: translateY(-100px);
+          opacity: 1;
+        }
+        .caption 
+        {
+          text-align: center;
+            transform: translateY(-80px);
+            opacity: 0;
+            transition: .6s;
+            @extend .flex_center;
+            flex-direction: column;
+            gap: 0;
+            width: 100%;
+            h3 
+            {
+              font-family: $poppins;
+              font-weight: 700;
+              color: $light-color;
+              margin-bottom: 0;
+              margin: 0;
+            }
+            p 
+            {
+              text-align: center;
+              color: $light-color !important;
+            }
+  
+            .social-links 
+            {
+             @extend .flex_content;
+             gap: 2rem ;
+             i 
+             {
+              font-size: 2rem;
+              color: $light-color-6;
+              @include transition(0.8s ease);
+              &:hover 
+              {
+                color: $light-color;
+              }
+             }
+            }
+        }
+      }
+  }
+  
+  .myswiper2 .swiper-slide-active 
+  {
+    transform: scale(1.1) translateY(-1rem);
+  }
+  .myswiper2 .swiper-slide-active .profile-card  .caption
+  {
+    transform: translateY(-100px) !important;
+    opacity: 1 !important;
+  }
+  .myswiper2 .swiper-slide-active .profile-card  .img  {
+    transform: translateY(-50px) scale(0.5);
+    @include border-radius(50%);
+    overflow: hidden;
+  }
+
+  .myswiper2 .swiper-slide-active .profile-card 
+  {
+    background: $secondary-color;
+  }

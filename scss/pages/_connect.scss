@@ -1,0 +1,49 @@
+.connect_wrapper 
+{
+    h3 
+    {
+        margin-bottom: 0;
+        color: $light-color-8;
+    }
+
+}
+
+.connect_form 
+{
+    padding: 1rem;
+    h6 
+    {
+        font-size: clamp(1rem , 2vw , 1.1rem);
+        color: $light-color;
+        text-align: left;
+        line-height: 1.5;
+        
+    }
+    label 
+    {
+        font-size: 0.9rem;
+        font-weight: 300;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        .example 
+        {
+            text-align: right;
+            font-size: 0.8rem;
+           display: block;
+        }
+    }
+    .connect_btns 
+    {
+        .button 
+        {
+            width: 100%;
+            padding: 0.8rem 3rem;
+            letter-spacing: 0.1rem;
+            &:hover 
+            {
+                background: $dark-color;
+            }
+        }
+    }
+}

@@ -1,0 +1,337 @@
+
+body.show-sidebar-cart {
+	overflow: hidden !important;
+	// height: 100% !important;
+
+	#sidebar-cart {
+		right: 0;
+		visibility: visible;
+	}
+}
+
+#sidebar-cart {
+	background: $secondary-color;
+	color: $light-color;
+	padding: 1.5rem 1.5rem 0 1.5rem;
+	position: fixed;
+	display: block;
+    z-index: 50000;
+	width: 350px;
+	height: 100vh;
+	top: 0;
+	right: -370px;
+    @include box-shadow(-1rem 0 1.5rem $dark-color-1);
+    @include transition(right 0.5s ease-in-out);
+
+  .close-button 
+  {
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+    width: 3rem;
+    height: 3rem;
+    @include border-radius(50%);
+    @extend .flex_center;
+    i 
+    {
+        font-size: 2rem;
+        color: $light-color;
+        &:hover 
+        {
+            color: $primary-color;
+        }
+    }
+  }
+
+	h2 {
+        padding: 2rem 0;
+		color: $light-color;
+        border-bottom: 0.01rem solid $light-color-1;
+		font-size: 1.4rem;
+		font-weight: 600;
+		letter-spacing: 0.2rem;
+		text-transform: uppercase;
+		line-height: 1.5;
+		margin: 2rem  0;
+		display: flex;
+		justify-content: center;
+
+		span.count {
+			color: $light-color;
+			background: $primary-color;
+			padding: 1rem;
+			margin-left: 0.5rem;
+			position: relative;
+			top: -0.5rem;
+			width: 1.8rem;
+			height: 1.8rem;
+            @include border-radius(50%);
+			font-size: 12px;
+			letter-spacing: 0;
+			@extend .flex_center;
+		}
+	}
+
+	ul.products {
+		margin: 0;
+		padding: 0 0 1.5rem 0;
+		list-style: none;
+		height: calc(100vh - 200px);
+		overflow-x: hidden;
+		overflow-y: auto;
+		display: block;
+		position: relative;
+		z-index: 0;
+
+		&:after {
+			background: linear-gradient(180deg, transparent, $primary-color);
+			height: 30px;
+			width: 300px;
+			z-index: 1;
+			content: "";
+			position: absolute;
+			right: 0;
+			bottom: 0;
+		}
+
+		li.product {
+			margin: 0 0 1rem 0;
+			padding: 0;
+			width: 100%;
+			min-height: 5rem;
+			background: $light-color-2;
+            backdrop-filter: blur(5rem);
+            border: 0.1rem solid $light-color-4;
+            @include border-radius(0.5rem);
+			color: $light-color;
+			position: relative;
+			z-index: 1;
+			display: flex;
+			flex-flow: row nowrap;
+			transition: all 0.5s linear;
+            @include transition(all 0.5s linear);
+
+			a.product-link {
+				width: 100%;
+				color: $primary-color;
+				padding: 10px;
+				margin: 0;
+				display: flex;
+				flex-direction: row;
+				flex-wrap: nowrap;
+
+				span.product-image {
+					display: inline-block;
+					width: 10rem;
+					height: 5rem;
+					padding-right: 10px;
+                    
+
+					img {
+						width: 100%;
+						height: 100%;
+						border: 1px solid $dark-color-4;
+						transition: all 0.5s linear;
+					}
+				}
+
+				span.product-details {
+					display: inline-block;
+					width: 100%;
+					min-height: 30px;
+					color: $light-color;
+
+					h3 {
+						margin: 0.3rem 2.5rem 0.5rem 0;
+						font-size: 0.8rem;
+						font-weight: 500;
+						color: $light-color;
+                        @include transition(all 0.5s linear);
+					}
+
+					span.qty-price {
+						display: flex;
+						flex-direction: row;
+						flex-wrap: nowrap;
+						align-content: center;
+						align-items: center;
+						justify-content: space-between;
+						width: 100%;
+						position: relative;
+						z-index: 5;
+						margin-top: 0.8rem;
+						
+						span.qty,
+						span.price {
+							display: flex;
+							flex-direction: row;
+							flex-wrap: nowrap;
+						}
+						
+						span.qty {
+							display: flex;
+							flex-direction: row;
+							flex-wrap: nowrap;
+							align-content: center;
+							align-items: center;
+							justify-content: flex-start;
+							
+							button.minus-button,
+							button.plus-button {
+								width: 1.5rem;
+								height: 1.5rem;
+								border-radius: 3px;
+								border: 0.1rem solid $dark-color-4;
+								background: $light-color-6;
+								color: $dark-color;
+								font-size: 1rem;
+								text-align: center;
+								vertical-align: middle;
+								line-height: 1rem;
+								transition: all 0.3s linear;
+								
+							}
+							
+							input.qty-input {
+								width: 1.8rem;
+								height: 1.8rem;
+								text-align: center;
+								border: 1px solid $dark-color-1;
+                                @include border-radius(0.2rem);
+								margin: 0 0.2rem;
+								transition: all 0.5s linear;
+								
+								&::-webkit-inner-spin-button,
+								&::-webkit-outer-spin-button {
+									appearance: none;
+									margin: 0;
+								}
+							}
+						}
+
+						span.price {
+							color: $light-color;
+							font-weight: 500;
+							font-size: 1rem;
+							display: inline-flex;
+						}
+					}
+				}
+			}
+
+			a.remove-button {
+				height: 16px;
+				width: 16px;
+				margin: 10px 10px 0 0;
+				text-decoration: none;
+				position: absolute;
+                color:red;
+				top: 2px;
+				right: 0;
+				z-index: 2;
+				display: flex;
+
+				span.remove-icon {
+					width: 15px;
+					height: 16px;
+					background: $light-color-6;
+					text-indent: -9999px;
+					overflow: hidden;
+					font-size: 0;
+					mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 36'%3E%3Cpath fill='currentColor' d='M30.9 2.3h-8.6L21.6 1c-.3-.6-.9-1-1.5-1h-8.2c-.6 0-1.2.4-1.5.9l-.7 1.4H1.1C.5 2.3 0 2.8 0 3.4v2.2c0 .6.5 1.1 1.1 1.1h29.7c.6 0 1.1-.5 1.1-1.1V3.4c.1-.6-.4-1.1-1-1.1zM3.8 32.8A3.4 3.4 0 0 0 7.2 36h17.6c1.8 0 3.3-1.4 3.4-3.2L29.7 9H2.3l1.5 23.8z'/%3E%3C/svg%3E");
+					transition: all 0.5s linear;
+                    &:hover 
+                    {
+                        background: $light-color;
+                    }
+				}
+			}
+		}
+	}
+	
+	div.totals {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		height: 9rem;
+		background: $light-color;
+		border-bottom: 1px solid $dark-color;
+		display: flex;
+		flex-direction: column;
+		flex-wrap: nowrap;
+		
+		div.subtotal,
+		div.shipping,
+		div.tax {
+			padding: 15px;
+			text-align: center;
+			color: $dark-color-8;
+			border-bottom: 1px solid $dark-color-4;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			font-size: 1rem;
+			font-weight: 400;
+			display: flex;
+			flex-direction: row;
+			flex-wrap: nowrap;
+			justify-content: space-between;
+
+			span.amount {
+				color: $secondary-color;
+				margin-left: 10px;
+				font-weight: 600;
+			}
+		}
+	}
+
+	div.action-buttons {
+		display: flex;
+        align-items: center;
+        justify-content: center;
+		background: $light-color;
+		a.view-cart-button,
+		a.checkout-button {
+			display: inline-block;
+			padding: 0.8rem 1.5rem;
+			margin: 1rem 15px;
+			text-align: center;
+            font-weight: 400;
+			text-transform: uppercase;
+			letter-spacing: 0.1rem;
+			font-size: 1rem;
+			border-width: 1px;
+			border-style: solid;
+			border-radius: 4px;
+			transition: all 0.5s linear;
+           &:hover 
+           {
+            @extend .pop;
+           }
+		}
+
+		a.view-cart-button {
+            background: $gradient-1;
+			border-color: $secondary-color;
+			color: $light-color;
+		}
+
+		a.checkout-button {
+			border-color: $gradient-1;
+			background: $gradient-1;
+			margin-left: 1rem;
+			color: $light-color;
+		}
+	}
+}
+
+#sidebar-cart-curtain {
+	background: $dark-color-4;
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	z-index: 10000;
+}

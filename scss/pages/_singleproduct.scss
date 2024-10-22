@@ -1,0 +1,260 @@
+#product {
+    background-color: $primary-color;
+    padding-top: 10rem;
+
+    .singleproduct , .customproduct {
+        background: $light-color-1;
+        border: 0.1rem solid $light-color-4;
+        @include border-radius(1.5rem);
+        overflow: hidden;
+        h1 
+        {
+            text-transform: capitalize;
+            #variant 
+            {
+               font-size: clamp(1.1rem , 2vw, 1.4rem); 
+               font-weight: 300;
+               text-transform: capitalize;
+               color: $light-color-6;
+            }
+        }
+        .product_img {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+    
+            img {
+                position: relative;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        .colors {
+
+            .allcolors {
+                display: flex;
+                gap: 1rem;
+    
+                span {
+                    height: 2rem;
+                    width: 2rem;
+                    @include border-radius(50%);
+                    cursor: pointer;
+                    background: var(--clr);
+                    display: block;
+                    outline: 0.1rem solid $light-color;
+                    @include transition(0.3s linear);
+                    &:hover {
+    
+                        outline-offset: 0.2rem;
+                    }
+                    &:active 
+                    {
+                        @include transform(scale(0.6));
+                    }
+                    &.active 
+                    {
+                        outline-offset: 0.2rem;
+                    }
+                }
+            }
+        }
+        h2 
+        {
+            color: $light-color;
+            margin-top: 2rem;
+        }
+        .quantity 
+        {
+            input 
+            {
+                width: 90%;
+                padding: 1rem;
+                border: 0;
+                outline: 0;
+                background: $light-color-1;
+                border: 0.1rem solid $light-color-4;
+                color: $light-color;
+                @include border-radius(0.5rem);
+            }
+        }
+       
+        .addcartBtn 
+        {
+           color: $light-color;
+           padding: 1.2rem 3rem;
+           max-width:  100%;
+           background: $secondary-color !important;
+           font-size: 1.4rem;
+           &:hover 
+           {
+            background: $light-color !important;
+            color: $dark-color;
+           }
+        }
+    }
+
+  .alert 
+  {
+    color: $light-color-6 !important;
+  }
+  
+
+}
+
+
+.product_information 
+{
+    background: $light-color;
+    padding-top: 0;
+    h1 
+    {
+        font-size: clamp(1.4rem , 2vw, 2rem); 
+        padding: 2rem 0;
+        text-transform: capitalize;
+        font-weight: 700;
+        border-bottom: 0.01rem solid $dark-color-2;
+    }
+    h2 
+    {
+        text-transform: capitalize;
+        color: $dark-color-8;
+        font-weight: 500;
+    }
+    ul 
+    {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        li 
+        {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            i 
+            {
+                font-size: 1.5rem;
+                margin-right: 0.5rem;
+            }
+        }
+    }
+    .product_info 
+    {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem;
+        padding: 1rem 0;
+        color: $secondary-color;
+        border-bottom: 0.01rem solid $dark-color-1;
+        border-top: 0.01rem solid $light-color-1;
+        &-icon 
+        {
+            margin-right: 0.5rem;
+            @extend .flex_center;
+            @include border-radius(50%);
+            i 
+            {
+                font-size: 2.5rem;
+                color: $secondary-color;
+            }
+        }
+        &-title 
+        {
+            font-size: clamp(1.2rem , 2vw, 1.4rem); 
+            font-weight: 500;
+
+        }
+
+    }
+    p 
+    {
+        font-size: 1.2rem;
+    }
+}
+
+#how_it_work 
+{
+    background: $secondary-color;
+   
+    .cardBox 
+    {
+        position: relative;
+        background: $light-color-1;
+        text-align: center;
+        margin-top: 5rem;
+        @include border-radius(1.5rem);
+        border: 0.01rem solid $light-color-4;
+        padding: 1rem;
+        &:hover 
+        {
+            background: $primary-color;
+        }
+        &:hover .order_no
+        {
+            background: $primary-color;
+            top: -1rem;
+            left: -1rem;
+            color: $light-color;
+        }
+        &:hover img
+        {
+            background: $primary-color;
+           @include transform(scale(1.8));
+        }
+        .order_no 
+        {
+            position: absolute;
+            top: -4rem;
+            left: 50%;
+            @include transform(translateX(-50%));
+            z-index: 50;
+            width: 8rem;
+            border: 0.01rem solid $light-color-4;
+            font-size: 5rem;
+            font-weight: 700;
+            @include transition(0.3s ease 0s);
+            @extend .flex_center;
+            color: $light-color-6;
+            height: 8rem;
+            background: $light-color-1;
+            backdrop-filter: blur(1rem);
+            @include border-radius(1.5rem);
+        }
+        &_img 
+        {
+            width: 100%;
+            @include border-radius(1.5rem);
+            overflow: hidden;
+            img 
+            {
+                position: relative;
+                top: 0;
+                right: 0;
+                width: 60%;
+                @include transition(0.3s ease);
+                @include border-radius(1.5rem);
+                object-fit: cover;
+            }
+        }
+        &_content 
+        {
+            padding: 1rem 0;
+            
+            h2 
+            {
+                color: $light-color;
+            }
+            p 
+            {
+                color: $light-color-6 !important;
+                text-align: center;
+            }
+        }
+    }
+}

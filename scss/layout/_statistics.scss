@@ -1,0 +1,28 @@
+#statistics
+{
+    background: $dark-color;
+    color: $light-color;
+    .number_box
+    {
+        background: radial-gradient(circle , $primary-color , $secondary-color 100% );
+        border: 0.1rem solid $light-color-4;
+        backdrop-filter: blur(1rem);
+        @include border-radius(1.5rem);
+       @extend .flex;
+       width: 100%;
+       align-items: center;
+       justify-content: center;
+       flex-direction: column;
+        min-height: 20rem;
+        span 
+        {
+            font-size: 3rem;
+            font-weight: 700;
+        }
+        h2 
+        {
+            color: $light-color;
+            font-size: clamp(1rem, 2.5vw, 1.5rem); 
+        }
+    }
+}

@@ -1,0 +1,155 @@
+.primary_btn
+{
+    position: relative;
+    background: $gradient-1;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    @include border-radius(5rem);
+    color: $light-color;
+    margin-top: 2rem;
+    border: 0.15rem solid $light-color-6;
+    text-transform: uppercase;
+    @extend .flex_center;
+    box-shadow: $shadow;
+    max-width: 220px;
+    padding: 1rem 2rem;
+    z-index: 10;
+
+    i 
+    {
+        font-size: 2rem;
+        @include transition(0.5s ease-out);
+    }
+    &:hover 
+    {
+        // background: $secondary-color-1;
+        color: $light-color;
+        border-color: $secondary-color;
+        @include transition(0.3s ease-in-out);
+        @extend .pop;
+        i 
+        {
+            position: relative;
+            left: 5px;
+        }
+    }
+}
+.addcartBtn 
+{
+    position: relative;
+    background: $light-color-2;
+    font-weight: 700;
+    font-size: 1rem;
+    display: block;
+    text-align: center;
+    letter-spacing: 0.1rem;
+    @include border-radius(5rem);
+    @include transition(0s);
+    color: $light-color;
+    border: 0.1rem solid $light-color-6;
+    text-transform: uppercase;
+    @extend .flex_center;
+    box-shadow: $shadow;
+    max-width: 200px;
+    padding: 0.8rem 1.5rem;
+    z-index: 10;
+    margin: 0 auto;
+    &:hover 
+    {
+        border-color: $light-color-4;
+        color: $dark-color;
+        background-color: $light-color;
+    }
+}
+.viewall_btn 
+{
+    max-width: 280px;
+    display: block;
+    margin: 2rem  auto;
+    text-align: center;
+}
+.circle 
+{
+    position: relative;
+    width: 1rem;
+    height: 1rem;
+    display: block;
+    background:$secondary-color;
+    margin-right: 2rem;
+    @include border-radius(5rem);
+    
+   &::after 
+   {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: $primary-color;
+    @extend .glow;
+    @include border-radius(5rem);
+   }
+}
+.circle-white 
+{
+    position: relative;
+    width: 1rem;
+    height: 1rem;
+    display: block;
+    background:$light-color-6;
+    margin-right: 2rem;
+    @include border-radius(5rem);
+    
+   &::after 
+   {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: $light-color-4;
+    @extend .glow;
+    @include border-radius(5rem);
+   }
+}
+
+.tab_btn 
+{
+    position: relative;
+    padding: 1rem 2rem;
+    border-bottom: 0.2rem  solid $light-color;
+    outline: 0;
+    background: none;
+    font-size: 1.8rem;
+    letter-spacing: 0.2rem;
+    color: $light-color;
+    border: 0;
+
+
+}
+
+.place_order 
+{
+    border: 0;
+    outline: 0;
+    padding: 1.5rem 2rem;
+    width: 60%;
+    margin: 2rem auto 0;
+    background: $gradient-1;
+    @include border-radius(0.5rem);
+    border: 0.1rem solid $light-color-4;
+    color: $light-color;
+
+    font-size: 1.6rem;
+    &:hover 
+    {
+        background: $light-color;
+        color: $dark-color;
+    }
+}

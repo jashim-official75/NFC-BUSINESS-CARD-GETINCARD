@@ -1,0 +1,1909 @@
+$extralg-desktop: "only screen and (max-width : 1499px)";
+$xllg-desktop: "only screen and (max-width : 1440px)";
+$mediumlg-desktop: "only screen and (max-width : 1320px)";
+$large-desktop: "only screen and (max-width : 1199px)";
+$media-desktop: "only screen and (max-width : 1024px)";
+$medium-desktop: "only screen and (max-width : 991px)";
+$media-tablet: "only screen and (max-width : 768px)";
+$media-mobile: "only screen and (max-width : 767px)";
+$media-mobile-lg: "only screen and (max-width : 575px)";
+$media-mobile-sm: "only screen and (max-width : 495px)";
+$media-mobile-xs: "only screen and (max-width : 375px)";
+$media-mobile-xs-m: "only screen and (max-width : 365px)";
+$media-mobile-xs-lg: "only screen and (max-width : 350px)";
+$media-mobile-xxs: "only screen and (max-width : 320px)";
+
+
+
+// =============================
+//MEDIA-LARGE DEVICE MAX-WIDTH:1499PX
+// =============================
+@media #{$extralg-desktop} {
+    #profile_preview .tab-content {
+        width: calc(100% - 30rem) !important;
+        margin-left: 25rem;
+        margin-right: auto;
+    }
+}
+
+// =============================
+//MEDIA-LARGE DEVICE MAX-WIDTH:1440PX
+// =============================
+
+
+@media #{$xllg-desktop} {
+    .hero_inner {
+        background-position: 100% 100%;
+    }
+    #profile_preview .nav-pills {
+        width: 16rem !important;
+        margin-top: 1.5rem;
+    }
+    #profile_preview .tab-content {
+        width: calc(100% - 18rem) !important;
+        margin-left: 18rem;
+        margin-right: 1.5rem;
+    }
+    .hero_content {
+        left: 5%;
+    }
+
+    .service_title {
+        font-size: 2.5rem;
+    }
+
+    #team_of_getinconnect .profile-card {
+        height: 360px;
+    }
+}
+
+// =============================
+//MEDIA-LARGE DEVICE MAX-WIDTH:1320PX
+// =============================
+
+@media #{$mediumlg-desktop} {
+    .service_title {
+        font-size: 2rem;
+    }
+}
+
+// =============================
+//MEDIA-LARGE DEVICE MAX-WIDTH:1199PX
+// =============================
+@media #{$large-desktop} {
+    #team_of_getinconnect .profile-card {
+        height: 320px;
+    }
+
+    .myswiper2 .swiper-slide-active .profile-card .img {
+        transform: translateY(-50px) scale(0.5);
+    }
+    #message_preview .message_popup .inner_message {
+        max-width: 100%;
+        width: 90%;
+    }
+}
+
+// =============================
+//MEDIA-DESKTOP MAX-WIDTH:1024PX
+// =============================
+@media #{$media-desktop} {
+    .logo img {
+        width: 75%;
+    }
+    #profile_preview .nav-pills {
+        position: fixed;
+        top: 70px;
+        z-index: 1;
+        margin-top: 0;
+        width: 100% !important;
+        background: $secondary-color;
+        padding-top: 3rem;
+    }
+    #profile_preview .nav-custom {
+        width: 248px !important;
+        padding: 1rem 0;
+        margin: 0rem auto 0.5rem;
+        border-radius: 5rem;
+        text-align: center;
+        display: flex;
+    }
+    #icon 
+    {
+        @include transform(scale(1));
+                visibility: visible;
+                display: flex;
+    }
+    #profile_preview .tab-content {
+        width: 100% !important;
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+        margin-top: 10rem;
+    }
+    .header_title 
+    {
+        flex: 1;
+    }
+    #dashboard .dashboard_inner-sidebar {
+        left: -100%;
+    }
+    #dashboard .dashboard_inner-sidebar.active {
+        left: 0;
+    }
+    #dashboard .dashboard_inner-showcase {
+        width: 100%;
+        margin-left: 0;
+    }
+    #dashboard .dashboard_inner-showcase.active {
+        width: calc(100% - 20rem);
+        margin-left:20rem;
+    }
+    #dashboard .dashboard_inner-showcase header {
+        width: 100%;
+    }
+    #dashboard .dashboard_inner-showcase header.active {
+        width: calc(100% - 20rem);
+    }
+    #profile_preview .nav-custom {
+        width: 100%;
+        padding: 1rem 0;
+    }
+    #product .alert {
+        text-align: center;
+        margin-top: 1rem;
+    }
+    .hero_inner {
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: $secondary-color;
+            opacity: 0.6;
+        }
+    }
+
+    .hero_content {
+        z-index: 100;
+    }
+
+    .service_title {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+
+    #services .services_part .service_list ul {
+        margin-left: 0;
+    }
+
+    #services .services_part .service_list ul li {
+        font-size: 1rem;
+        margin: 0.2rem 0;
+    }
+
+    .primary_btn {
+        margin-top: 0;
+    }
+
+    .primary_btn {
+        margin-top: 0rem;
+        border: 0.1rem solid rgba(255, 255, 255, 0.6);
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+        max-width: 220px;
+        padding: 0.6rem 1.5rem;
+    }
+
+    .title {
+        font-size: 1.2rem;
+    }
+
+    .viewall_btn {
+        margin: 1.5rem auto;
+        padding: 1.2rem 0rem !important;
+        max-width: 300px !important;
+    }
+
+    #product .singleproduct .addcartBtn,
+    #product .customproduct .addcartBtn {
+        color: #fff;
+        padding: 1rem 2rem;
+        max-width: 100%;
+        font-size: 1rem;
+    }
+
+    #how_it_work .cardBox .order_no {
+        top: -3rem;
+        transform: translateX(-50%);
+        width: 6rem;
+        font-size: 3rem;
+        height: 6rem;
+    }
+
+    #checkout ul li label {
+        font-size: 1rem;
+        padding: 2rem 1rem 2rem 5rem;
+        margin: 0;
+        height: 0;
+        top: 0;
+    }
+
+    #checkout ul li {
+        color: rgba(255, 255, 255, 0.6);
+        display: block;
+        position: relative;
+        width: 100%;
+        height: 4rem;
+        border-bottom: transparent;
+    }
+
+    #checkout ul li label {
+        font-size: 1rem;
+        padding: 1rem 1rem 0rem 4rem;
+        margin: 0;
+        height: 0;
+        top: 0;
+    }
+
+    #checkout ul li .check {
+        height: 1.5rem;
+        width: 1.5rem;
+        top: 22px;
+        left: 20px;
+    }
+
+    #checkout ul li .check::before {
+        top: 27%;
+        left: 30%;
+    }
+}
+
+// =============================
+//MEDIA-LARGE DEVICE MAX-WIDTH:991px
+// =============================
+@media #{$medium-desktop} {
+    #dashboard .dashboard_inner-sidebar {
+        left: -100%;
+        width: 13rem;
+    }
+    #message_preview .message_table tbody td {
+        padding: 1rem;
+        flex-direction: column;
+    }
+    .message_edit {
+        margin-top: 2rem;
+    }
+    #dashboard .dashboard_inner-showcase.active {
+        width: calc(100% - 13rem);
+        margin-left:13rem;
+    }
+    #dashboard .dashboard_inner-showcase header.active {
+        width: calc(100% - 13rem);
+    }
+    #dashboard .dashboard_inner-sidebar nav ul li a {
+        font-size: 1rem;
+        padding-left: 0.5rem;
+    }
+    .logo img {
+        display: block;
+        margin-right: 1rem;
+        width: 8rem;
+    }
+    #dashboard .dashboard_inner-showcase {
+        width: 100%;
+        margin-left: 0;
+    }
+    #dashboard .dashboard_inner-showcase header {
+        width: 100%;
+    }
+ 
+    .preview_card .business_card {
+        -webkit-backdrop-filter: blur(150rem);
+        backdrop-filter: blur(150rem);
+        width: 85%;
+        transform: scale(0.6);
+    }
+    #team_of_getinconnect h2 {
+        margin-bottom: 3rem;
+    }
+
+
+    #our_products .productcard_footer {
+        min-height: 8rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #team_of_getinconnect .profile-card {
+        height: 340px;
+    }
+
+    .sm-column {
+        flex-direction: column-reverse;
+    }
+
+    .servicebox {
+        padding: 0 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .service_img {
+        position: relative;
+        width: 100%;
+        height: 500px;
+        @include border-radius(2rem);
+        overflow: hidden;
+
+        img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            object-fit: cover;
+            left: 0;
+        }
+    }
+
+    .float-end {
+        float: none !important;
+    }
+
+    .addcartBtn {
+        font-size: 0.8rem;
+        letter-spacing: 0.4px;
+        max-width: 155px;
+        padding: 0.6rem 0;
+    }
+
+    #our_products .productcard_footer .productcard_title {
+        font-size: 0.8rem;
+        padding: 1rem;
+    }
+
+    #product {
+        padding-top: 6rem;
+        padding-bottom: 1rem;
+    }
+
+    #product .singleproduct h1 #variant,
+    #product .customproduct h1 #variant {
+        display: block;
+        margin-top: 0.7rem;
+    }
+
+    #product .singleproduct .colors .allcolors span,
+    #product .customproduct .colors .allcolors span {
+        height: 1.5rem;
+        width: 1.5rem;
+    }
+
+    #account .signup_with_socail {
+        padding-left: 0;
+        height: 300px;
+        gap: 2rem;
+    }
+
+    #account .signup_with_socail .autoaccount i {
+        position: absolute;
+        top: 0;
+        left: 1rem;
+        font-size: 2rem;
+        background: transparent;
+        width: 3rem;
+        height: 100%;
+        opacity: 1;
+        text-align: center;
+    }
+
+    #account .signup_with_socail .autoaccount {
+        padding: 1.5rem 1rem;
+        width: 20rem;
+        display: block;
+        text-align: right;
+        font-size: 1.2rem;
+    }
+
+    .place_order {
+        border: 0;
+        outline: 0;
+        padding: 1.5rem 2rem;
+        max-width: 300px;
+        margin: 2rem auto 0;
+        border-radius: 0.5rem;
+        border: 0.1rem solid rgba(255, 255, 255, 0.4);
+        color: #fff;
+        font-size: 1.2rem;
+    }
+}
+
+
+
+// =============================
+//MEDIA-LARGE DEVICE MAX-WIDTH:768PX
+// =============================
+@media #{$media-tablet} {
+    .inputBx label {
+        font-size: 1.1rem;
+    }
+    #dashboard .dashboard_inner-sidebar nav {
+        padding-top: 0rem;
+        gap: 1rem;
+    }
+    #dashboard .dashboard_inner-showcase header #icon {
+        width: 3rem;
+        height: 3rem;
+    }
+    #profile_preview .edit__profile .edit_img .editImgbox {
+        width: 13rem;
+        height: 13rem;
+        margin: 1rem 0;
+    }
+    #dashboard .dashboard_inner-showcase header #icon i {
+        font-size: 1.3rem;
+        margin-top: 0.2rem;
+    }
+    #dashboard .dashboard_inner-showcase header .profile_area .profile img {
+        width: 3rem;
+    }
+    #dashboard .dashboard_inner-showcase header .profile_area .notification i {
+        font-size: 1.6rem;
+    }
+    #dashboard .dashboard_inner-showcase header .profile_area .profile .dropdown {
+        top: 125%;
+        left: -80%;
+      width: 8rem;
+    }
+    #dashboard .dashboard_inner-showcase header .profile_area .profile .dropdown ul li a {
+        padding: 0.6rem 0;
+    }
+    .logo img {
+        width: 70%;
+        margin: 0;
+    }
+    #dashboard .dashboard_inner-sidebar {
+        width: 5rem;
+        overflow: hidden;
+        text-align: center;
+    }
+    .logo img {
+        width: 90%;
+        margin: 0 auto;
+    }
+    #dashboard .dashboard_inner-showcase.active {
+        width: calc(100% - 5rem);
+        margin-left:5rem;
+    }
+    #dashboard .dashboard_inner-showcase header.active {
+        width: calc(100% - 5rem);
+        padding-left: 0.5rem;
+    }
+    #dashboard .dashboard_inner-showcase header.active #icon {
+    background: none;
+    border: none;
+    }
+    #dashboard .dashboard_inner-showcase header.active #icon i {
+    color: $light-color;
+    font-size: 2rem;
+    }
+    #dashboard .dashboard_inner-showcase header {
+        padding: 0 0.6rem;
+    }
+    #dashboard .dashboard_inner-sidebar nav ul li a .dash_icon {
+        margin-left: 0.5rem;
+    }
+    #dashboard .dashboard_inner-sidebar nav ul li a span {
+        display: block;
+        padding-left: 1rem;
+    }
+    .preview_card .business_card .brand_info #brand_title {
+        font-size: 1.6rem;
+    }
+    .preview_card .business_card .brand_info #brand_subtitle {
+        font-size: 1.2rem;
+    }
+    .preview_card .business_card #close_mark {
+        width: 3rem;
+        height: 3rem;
+    }
+    .preview_card .business_card #close_mark i {
+        font-size: 1.5rem;
+    }
+    .preview_card .business_card {
+        height: 25rem;
+    }
+    .inputGroup {
+        flex-direction: column;
+    }
+
+    #checkout {
+        padding-top: 6rem;
+    }
+
+    .inputBx {
+        width: 100% !important;
+    }
+
+    #cart_bottom .main-wrapper h1 {
+        font-size: 1.6rem;
+        margin: 2rem 0;
+    }
+
+    .cart_table {
+        border: 0 !important;
+        background: none !important;
+        box-shadow: none !important;
+    }
+
+    .cart_table thead {
+        display: none;
+    }
+
+    .cart_table,
+    .cart_table tbody,
+    .cart_table tr,
+    .cart_table td {
+        display: block;
+    }
+
+    .cart_table tbody tr {
+        margin-bottom: 1rem;
+        border: 0 !important;
+        background: #0005;
+    }
+
+    .cart_table tbody tr td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+
+    #cart .cart_page .cart_table td {
+        padding: 1rem;
+        vertical-align: middle;
+    }
+
+    .cart_table tbody tr:nth-child(even),
+    .cart_table tbody tr:hover {
+        background: #0005 !important;
+    }
+
+    .cart_table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 40%;
+        padding-left: 15px;
+        text-align: left;
+        top: 50%;
+        font-weight: 700;
+        font-size: 1rem;
+        transform: translatey(-50%);
+    }
+
+    #cart .cart_page .cart_table tbody .trash i {
+        font-size: 1.5rem;
+        color: #fff;
+    }
+
+    #cart .cart_page {
+        margin: 1rem 0 1rem;
+    }
+
+    .product_details {
+        padding: 0rem;
+    }
+
+    #company_dream {
+        height: 80vh;
+    }
+
+    #about_us .primary_btn {
+        margin: 0;
+    }
+
+    .humburger {
+        display: block;
+    }
+
+   header nav {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100vw;
+        height: 100vh;
+        background: $secondary-color-1;
+        z-index: 1000;
+        @include transform(translateX(100%));
+        @include transition(transform .3s);
+
+        @supports (backdrop-filter: blur(0.1rem)) {
+            background: linear-gradient(to right, $dark-color-1 50%, $dark-color 50%);
+            backdrop-filter: blur(0.1rem);
+            border-left: 1px solid $light-color-4;
+            @include box-shadow(0 0.5rem 2rem $dark-color-2);
+        }
+
+        ul {
+            position: absolute;
+            right: 5rem;
+            flex-direction: column;
+            margin-top: 5rem !important;
+            margin-right: 2rem !important;
+            height: 100vh;
+
+        }
+
+        .login {
+            margin: 0 !important;
+        }
+
+        li {
+            display: block;
+            text-align: left;
+            margin: 0.5rem 0;
+
+            a {
+                color: $light-color !important;
+                font-size: 1.2rem;
+
+                &::after {
+                    display: none;
+                }
+
+                &:hover {
+                    border-bottom: 0 !important;
+                    color: $primary-color !important;
+                }
+            }
+        }
+
+        &.togglenav {
+            @include transform(translateX(0%));
+            @include box-shadow(0 0.5rem 2rem $dark-color-2, 0 0 0 100vh $dark-color-2);
+            overflow: hidden;
+
+        }
+
+        &.togglenav .menubar {
+            padding: 0 !important;
+        }
+
+        &.togglenav a {
+            opacity: 1;
+            transform: translate3d(0, 0, 0) scale(1);
+        }
+    }
+
+    .primary_btn {
+        padding: 1rem 1.5rem;
+        margin: auto;
+    }
+
+    .hero_content {
+        left: 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    .hero_inner {
+        height: 600px;
+    }
+
+    .menubar {
+        height: 4rem;
+        padding: 0;
+    }
+
+    .viewall_btn {
+        padding: 1rem 0rem !important;
+        font-size: 0.8rem;
+        max-width: 234px !important;
+    }
+
+    .float-end {
+        float: none !important;
+    }
+
+    .product_details {
+        padding: 0rem;
+    }
+
+    #account .account {
+        margin-top: 3rem;
+    }
+
+    .account_form .inputBx label {
+        font-size: 1.1rem;
+    }
+
+    .account_form .account_btns {
+        gap: 1rem;
+        margin-top: 2rem;
+    }
+
+    #account .primary_btn {
+        padding: 1rem 2rem;
+        margin: 0;
+        font-size: 0.9rem;
+    }
+
+    .primary_btn {
+        padding: 1rem 1.5rem;
+
+    }
+
+    #checkout .order table td {
+        padding-left: 0.5rem;
+    }
+
+    #checkout .order table thead th {
+        font-size: 1rem;
+        padding-left: 0;
+        text-align: center;
+    }
+}
+
+// =============================
+//MEDIA-MOBILE DEVICE MAX-WIDTH:767px
+// =============================
+@media #{$media-mobile} {
+  
+    #team_of_getinconnect .profile-card {
+        height: 260px;
+    }
+
+    .tab_btn {
+        padding: 1rem 0;
+        outline: 0;
+        background: none;
+        font-size: 1.2rem;
+        letter-spacing: 0;
+    }
+
+    #team_of_getinconnect .profile-card {
+        height: auto;
+        background: $primary-color;
+        transform: scale(0.7);
+        margin: 0;
+    }
+
+    #team_of_getinconnect .profile-card:hover {
+        background: none;
+    }
+
+    #team_of_getinconnect .profile-card .caption h3 {
+        margin-bottom: 1rem;
+        font-size: 1.5rem;
+    }
+
+    #product .singleproduct h1 #variant,
+    #product .customproduct h1 #variant {
+        display: inline;
+        margin-top: 0;
+    }
+
+    .product_information p {
+        font-size: 1rem;
+    }
+
+    .product_information ul li {
+        font-size: 1rem;
+        margin-bottom: 0.3rem;
+    }
+
+    #product .singleproduct .product_img img,
+    #product .customproduct .product_img img {
+
+        width: 100%;
+        height: 300px;
+        object-fit: contain;
+        background: $dark-color;
+    }
+
+    #product {
+        padding-top: 5rem;
+    }
+    #profile_preview .nav-pills {
+        top: 40px;
+    }
+}
+
+
+// =============================
+//MEDIA-MOBILE-SM DEVICE MAX-WIDTH:575px
+// =============================
+@media #{$media-mobile-lg} {
+    .logo img {
+        width: 70%;
+        margin-left:0.5rem;
+    }
+    #profile_preview .edit__profile .edit_img .editImgbox {
+        width: 10rem;
+        height: 10rem;
+    }
+    #profile_preview .edit__profile .edit_img .editImgbox .edit_icon {
+        position: absolute;
+        bottom: -0.2rem;
+        right: 3rem;
+        width: 2rem;
+        height: 2rem;
+        box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.6);
+    }
+    .inputBx label {
+        font-size: 1rem;
+    }
+    #profile_preview .upload_cover {
+        margin-bottom: 2rem;
+    }
+    #product .small_images img {
+        width: 5rem;
+    }
+    #dashboard .dashboard_inner-showcase .business_card-preview .businesscard {
+        width: 90%;
+        height: 320px;
+    }
+    #product .form_inner .brand_data .inputBox {
+        width: 100%;
+    }
+    #product .form_inner .logo_info .color_picker, #product .form_inner .logo_info .logo_uploader {
+        gap: 1rem;
+        flex-direction: column;
+    }
+    .preview_card .business_card .brand_info #brand_title {
+        font-size: 1.4rem;
+        margin-bottom: 0.5rem;
+    }
+    .preview_card .business_card .brand_info #brand_subtitle {
+        font-size: 1rem;
+    }
+    .getincard_logo img {
+        width: 6rem;
+    }
+    .preview_card .business_card {
+        height: 20rem;
+    }
+    #product .big_img {
+        height: 25rem;
+    }
+    #cart_bottom .main-wrapper h1 {
+        font-size: 1.2rem;
+        margin: 2rem 0;
+    }
+
+    .swiper-pagination {
+        display: none;
+    }
+
+    #account .primary_btn {
+        padding: 0.8rem 1.5rem;
+        margin: 0;
+        font-size: 0.8rem;
+    }
+
+    #our_products {
+        padding: 7rem 0;
+    }
+
+    #testomonials .swiper-slide {
+        padding: 0.5rem;
+    }
+
+    #testomonials .testomonial_card-profile {
+        top: -25%;
+        transform: translateX(-50%) scale(0.6);
+    }
+
+    #testomonials .testomonial_card-thoughts {
+        padding: 0.5rem 1rem;
+    }
+
+    #testomonials .testomonial_card-quote i {
+        font-size: 3rem;
+    }
+
+    #testomonials .testomonial_card-userinfo h2 {
+        font-size: 1.2rem;
+    }
+
+    #about_us {
+        position: relative;
+        width: 100%;
+        height: 80vh;
+        background: $light-color;
+    }
+
+    #statistics .number_box {
+        min-height: 16rem;
+    }
+
+    #statistics .number_box span {
+        font-size: 2rem;
+    }
+
+    #myTabContent p {
+        font-size: 1rem;
+        padding: 0 0.5rem;
+    }
+
+    .about_content {
+        left: 0;
+        text-align: center;
+        padding: 0 0.5rem;
+    }
+
+    #company_dream {
+        padding-top: 2rem;
+        height: auto;
+    }
+
+    #about_us .about_content p {
+        font-size: 1.2rem;
+        padding-right: 0;
+    }
+
+    .about_content .primary_btn {
+        margin: auto !important;
+    }
+
+    .about_content h1 {
+        justify-content: center;
+        margin-bottom: 2rem;
+    }
+
+    section {
+        padding: 2rem 0;
+    }
+
+    #our_products .productcard {
+        width: 80%;
+        margin: 1rem auto 0;
+    }
+
+    .viewall_btn {
+        margin-top: 3rem;
+    }
+
+    #features .features_card,
+    #getinconnectmagic .magicCard,
+    #statistics .number_box {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .faq-content .faq-item-text {
+        font-size: 1rem;
+    }
+
+    .faq-content .faq-item-head {
+        padding: 1rem;
+    }
+
+    .single_footer {
+
+        padding: 0 1.5rem;
+    }
+
+    .footer .social_profile ul li a {
+
+        border-radius: 5rem;
+        width: 3rem;
+        height: 3rem;
+
+        i {
+            font-size: 1rem;
+        }
+    }
+
+    .faq-title h1::after {
+        height: 2px;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        transform: translateY(-50%) scale(0.8) !important;
+    }
+
+    #features .features_card-description ul li {
+        padding: 0.3rem 0;
+        border-bottom: 1px solid $light-color-1;
+        border-top: 1px solid $dark-color-1;
+
+        &:first-child {
+            border-top: 0;
+        }
+
+    }
+
+    .product_details {
+        padding: 1rem;
+    }
+
+    #product .singleproduct .product_img img,
+    #product .customproduct .product_img img {
+        width: 100%;
+        height: 270px;
+        object-fit: cover;
+        object-position: 0 -66px;
+    }
+
+    .product_information ul li i {
+        font-size: 1.2rem;
+        margin-right: 0.5rem;
+    }
+
+    #how_it_work .cardBox {
+        border-radius: 1.5rem;
+        border: 0.01rem solid rgba(255, 255, 255, 0.4);
+        padding: 0.5rem;
+        width: 80%;
+        margin: 2rem auto 0;
+    }
+
+    #how_it_work .cardBox_img img {
+        width: 70%;
+    }
+
+    #how_it_work .cardBox .order_no,
+    #how_it_work .cardBox:hover .order_no {
+        background: #7239D6;
+        top: -1rem;
+        left: 0;
+        color: #fff;
+    }
+
+    h2 {
+        margin-bottom: 10px;
+    }
+
+    #how_it_work .cardBox img {
+        background: #7239D6;
+        transform: scale(1.8);
+    }
+
+    #account .signup_with_socail .autoaccount {
+        padding: 1rem 1rem;
+        width: 16rem;
+        display: block;
+        text-align: right;
+        font-size: 1rem;
+        border-radius: 0.5rem;
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+
+    #account .signup_with_socail .autoaccount i {
+        position: absolute;
+        top: 0;
+        left: 1rem;
+        font-size: 2rem;
+        background: transparent;
+        width: 1.5rem;
+        height: 100%;
+        opacity: 1;
+        text-align: center;
+    }
+
+    input {
+        font-size: 0.8rem;
+    }
+
+    ::textarea {
+        font-size: 0.8rem;
+    }
+
+    #checkout .billing_form select {
+        font-size: 0.8rem;
+    }
+
+    .account_form .inputBx .password_wrapper #eye {
+        right: 1.5rem;
+    }
+
+    .mt-5 {
+        margin-top: 1rem !important;
+    }
+
+    #features .features_card:hover li {
+        border-color: transparent;
+    }
+
+    .cuponBx button {
+        padding: 1rem 1rem;
+        top: 1px;
+        right: 1px;
+        bottom: 0;
+        font-size: 0.8rem;
+    }
+
+    #cart_bottom .primary_btn {
+        max-width: 60%;
+        font-size: 0.9rem;
+    }
+
+    #checkout ul li img {
+        width: 8rem;
+    }
+
+    #checkout ul li {
+        height: 3rem;
+        display: flex;
+        align-items: center;
+    }
+
+    #checkout ul li label {
+        padding: 0 0 0 4rem;
+    }
+
+    .place_order {
+        padding: 1rem 0rem;
+        max-width: 70%;
+        margin: 1.5rem auto 0;
+        font-size: 1.2rem;
+    }
+    #product .customproduct {
+        padding: 0.5rem;
+    }
+}
+
+// =============================
+//MEDIA-MOBILE-SM DEVICE MAX-WIDTH:495PX
+// =============================
+
+@media #{$media-mobile-sm} {
+    #dashboard .dashboard_inner-showcase .business_card-preview .businesscard_inner img {
+        position: absolute;
+        top: 0.7rem;
+        left: 0.5rem;
+        width: 7rem;
+    }
+    #dashboard .dashboard_inner-showcase .business_card-preview .businesscard {
+        width: 90%;
+        height: 275px;
+    }
+    #product .form_inner .logo_info .color_picker, #product .form_inner .logo_info .logo_uploader {
+        width: 100%;
+    }
+    #product .form_inner .cart_btn .addcartBtn {
+        font-size: 0.8rem;
+        width: 80%;
+    }
+    #product .form_inner .cart_btn {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    #product .form_inner .cart_btn .addcartBtn {
+        font-size: 0.8rem;
+    }
+    #product .big_img {
+        height: 20rem;
+    }
+    .primary_btn {
+        padding: 0.6rem 1.5rem;
+        font-size: 13px;
+        text-align: center;
+    }
+    .getincard_logo img {
+        width: 6rem;
+    }
+    .preview_card .business_card .brand_logo img {
+        width: 6rem;
+    }
+    .preview_card .business_card {
+        height: 16rem;
+    }
+    .preview_card .business_card .brand_info #brand_title {
+        font-size: 1.2rem;
+    }
+    .preview_card .business_card .brand_info #brand_subtitle {
+        font-size: 0.8rem;
+    }
+    .checked {
+        gap: 1rem;
+        flex-direction: column;
+        margin-left: 0.5rem;
+    }
+
+    #account .account {
+        margin-top: 4rem;
+    }
+
+    lord-icon {
+        width: 120px !important;
+        height: 120px !important;
+    }
+
+    .account_form {
+        padding: 0.5rem;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        transform: translateY(-50%) scale(0.6) !important;
+    }
+
+    .hero_content {
+        padding: 1rem;
+    }
+
+    #our_products .productcard_header-img img {
+        height: 220px;
+        object-fit: cover;
+    }
+
+    .service_list {
+        text-align: center !important;
+    }
+
+    .service_title {
+        font-size: 1.3rem;
+        line-height: 1.8;
+    }
+
+    #services .services_part .service_list ul li {
+        font-size: 0.9rem;
+        margin: 0.1rem 0;
+        gap: 0.1rem;
+    }
+
+    #services .services_part .service_list ul li i {
+        font-size: 1.4rem;
+    }
+
+    .service_img {
+        width: 80%;
+        height: 400px;
+        margin: auto;
+    }
+
+    header nav ul {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 0 !important;
+        margin-right: 0 !important;
+        height: 100vh;
+        background: $dark-color;
+        width: 100%;
+
+    }
+    #getinconnectmagic .magicCard:hover h2 {
+        font-size: 1.2rem;
+        margin-top: 1rem;
+    }
+
+    #team_of_getinconnect h2 {
+        margin-bottom: 0;
+    }
+
+    #team_of_getinconnect .profile-card {
+        height: 380px;
+    }
+
+    #company_dream {
+        padding-top: 1rem;
+        height: 60vh;
+    }
+
+    #about_hero .about_hero-content {
+        padding: 0 0.5rem;
+    }
+
+    #sidebar-cart .close-button {
+        top: 0;
+        left: 0;
+    }
+
+    .product_details {
+        padding: 1rem;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        /* width: 100%; */
+    }
+
+    .product_information ul li {
+        font-size: 0.9rem;
+        margin-bottom: 0.3rem;
+        display: flex;
+    }
+
+    #how_it_work .cardBox .order_no {
+        font-size: 1.8rem;
+        width: 4rem;
+        height: 4rem;
+        border-radius: 0.5rem;
+    }
+
+    .addcartBtn {
+        font-size: 1rem;
+        letter-spacing: 0.8px;
+        max-width: 100%;
+        padding: 0.8rem 2rem;
+    }
+
+    .mySwiper1 {
+        margin-top: 1rem;
+    }
+
+    .mySwiper1 .swiper-wrapper {
+        padding: 5rem 0 1rem;
+    }
+
+    .faq-title h1 {
+        margin: 0 0 2rem;
+        font-size: 1.2rem;
+    }
+
+    .footer .single_footer h4 {
+        margin-top: 0;
+        margin-bottom: 2rem;
+        font-size: 1.2rem;
+    }
+
+    .footer {
+        padding-top: 2rem;
+    }
+
+    #cart_bottom .primary_btn {
+        max-width: 80%;
+        padding: 1rem;
+        font-size: 0.8rem;
+    }
+
+    .profile_wrapper {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+    }
+}
+
+
+// =============================
+//MEDIA-LARGE DEVICE MAX-WIDTH:375PX
+// ===========================
+@media #{$media-mobile-xs} {
+    #dashboard .dashboard_inner-showcase .business_card-preview .businesscard_inner img {
+        width: 6rem;
+    }
+    .profile_wrapper .share_profile .share_modal .share_platform ul {
+
+        width: 80%;
+        margin: 1rem auto;
+    }
+    #dashboard .dashboard_inner-showcase .business_card-preview .businesscard {
+        height:240px;
+    }
+    lord-icon {
+        width: 100px !important;
+        height: 100px !important;
+    }
+    #product .small_images img {
+        width: 4rem;
+    }
+ 
+    .preview_card .business_card {
+        height: 14rem;
+    }
+    .preview_card .business_card .brand_info #brand_title {
+        font-size: 1rem;
+    }
+    .preview_card .business_card .brand_info #brand_subtitle {
+        font-size: 0.7rem;
+    }
+
+    .cuponBx button {
+        padding: 1rem 1rem;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        font-size: 0.8rem;
+    }
+
+    .mySwiper1 .swiper-wrapper {
+        padding: 1rem 0 0;
+    }
+
+    #sidebar-cart {
+        overflow: auto;
+        right: -100%;
+    }
+
+    #sidebar-cart h2 {
+        padding: 1rem 0;
+        font-size: 1.2rem;
+        line-height: 1;
+        margin: 1rem 0;
+    }
+
+    .footer .social_profile ul li a {
+        margin: 0;
+    }
+
+    .service_img {
+        width: 90%;
+        height: 300px;
+        margin: auto;
+    }
+
+    .primary_btn {
+        max-width: 190px;
+        padding: 0.6rem 1.5rem;
+        font-size: 14px;
+    }
+
+    .service_title {
+        font-size: 1.2rem;
+        line-height: 1.5;
+    }
+
+    #sidebar-cart {
+        width: 100%;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        transform: translateY(-50%) scale(0.5) !important;
+    }
+
+    #getinconnectmagic .magicCard {
+        padding: 0.5rem;
+        min-height: 16rem;
+    }
+
+    #getinconnectmagic .magicCard_title h2 {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+
+    #getinconnectmagic .magicCard_desc p {
+        padding: 0 1rem;
+    }
+
+    #designportfolio img {
+        border-radius: 1rem;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .section_title {
+        font-size: 1.4rem;
+        padding: 0 1rem;
+    }
+
+    #testomonials .swiper-slide {
+        transform: scale(0.8) !important;
+    }
+
+    .mySwiper1 .swiper-wrapper {
+        padding: 2rem 0 0;
+    }
+
+    h2 {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    #team_of_getinconnect .profile-card {
+        height: 350px;
+    }
+
+    #sidebar-cart div.action-buttons a.checkout-button {
+        margin-left: 0;
+    }
+
+    #product .singleproduct .product_img img,
+    #product .customproduct .product_img img {
+        height: 100%;
+        object-position: 0;
+    }
+
+    .product_details {
+        padding: 0.5rem;
+    }
+
+    #product .singleproduct .quantity input,
+    #product .customproduct .quantity input {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .mt-5 {
+        margin-top: 2rem !important;
+    }
+
+    #product .singleproduct h1 #variant,
+    #product .customproduct h1 #variant {
+        font-size: 1rem;
+    }
+
+    #product .singleproduct .colors .allcolors,
+    #product .customproduct .colors .allcolors {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+    }
+
+    .product_information h1 {
+        padding: 2rem 0;
+        letter-spacing: 0;
+        font-size: 1.2rem;
+    }
+
+    .circle {
+        margin-right: 1rem;
+    }
+
+    .product_information .product_info-icon i {
+        font-size: 1.8rem;
+    }
+
+    .addcartBtn {
+        font-size: 0.8rem;
+    }
+
+    #account .signup_with_socail {
+        padding-left: 0;
+        height: 220px;
+        gap: 1rem;
+    }
+
+    #statistics .number_box {
+        min-height: 14rem;
+    }
+
+    #cart_bottom .primary_btn {
+        max-width: 90%;
+        padding: 1rem;
+        font-size: 0.8rem;
+    }
+
+    .wrapper .address_info ul li a i {
+        margin-right: 0.5;
+    }
+
+    .info_btn {
+        display: flex;
+        gap: 1rem;
+    }
+
+    .wrapper .connect_btns .button {
+        margin: 0.5rem 0;
+        padding: 0.9rem 1.5rem;
+        font-size: 0.8rem;
+    }
+
+    .wrapper .desc {
+        padding: 0 1.5rem;
+    }
+
+    .wrapper .desc p {
+        text-align: justify;
+    }
+
+    .wrapper .address_info ul li a {
+        font-size: 13px;
+        margin: 1rem 0 0 0.5rem;
+    }
+
+    .wrapper .profile_title h2 {
+        font-size: 1.6rem;
+        font-weight: 500;
+        margin-bottom: 0.2rem;
+    }
+
+    .wrapper .profile_title h3 {
+        text-transform: capitalize;
+        font-weight: 400;
+        font-size: 1rem;
+    }
+
+    .wrapper .profile_title #holder {
+        font-size: 0.8rem;
+    }
+
+    .wrapper .profile_title .desc p {
+        text-align-last: center;
+        color: $light-color !important;
+        line-height: 1.6;
+        font-size: 0.8rem;
+    }
+
+    #checkout label {
+        font-size: 0.8rem;
+    }
+
+    .checked input[type=checkbox] {
+        transform: scale(1.2);
+        position: relative;
+        top: 0.1rem;
+    }
+
+    .place_order {
+        font-size: 1rem;
+    }
+
+    #checkout ul li .check::before {
+        top: 28%;
+    }
+
+    #checkout ul li .check {
+        left: 5px;
+    }
+
+    #checkout ul li label {
+        padding: 0 0 0 3rem;
+    }
+
+    #checkout h1 {
+
+        font-size: 1rem !important;
+        padding: 1rem 0;
+    }
+
+    #checkout .order table .product {
+
+        flex-direction: column;
+    }
+    #checkout .order table td {
+        padding-left: 0;
+        text-align: center;
+        padding: 1rem 0;
+    }
+    #checkout .coupon .apply_btn {
+        padding: 0;
+        font-size: 0.8rem;
+        width: 8rem;
+    }
+    #message_preview {
+        position: relative;
+        padding: 6rem 1rem 0 1rem;
+    }
+    #message_preview .message_table thead th {
+        font-size: 1.2rem;
+        font-weight: 400;
+    }
+}
+
+// =============================
+//MEDIA-LARGE DEVICE MAX-WIDTH:365PX
+// ===========================
+@media #{$media-mobile-xs-m} {
+    .wrapper .address_info {
+        flex-direction: row;
+    }
+
+    .wrapper .address_info ul li a i {
+        margin-right: 0.5rem;
+    }
+
+    .info_btn {
+        display: flex;
+        gap: 0.5rem;
+    }
+
+    .wrapper .connect_btns .button {
+        margin: 0.5rem 0;
+        padding: 0.8rem 1.5rem;
+        font-size: 0.8rem;
+        border: 0.1rem solid $light-color-2;
+    }
+}
+
+// =============================
+//MEDIA-LARGE DEVICE MAX-WIDTH:350PX
+// ===========================
+@media #{$media-mobile-xs-lg} {
+    #dashboard .dashboard_inner-showcase .business_card-preview .businesscard_inner img {
+        width: 5rem;
+    }
+    #dashboard .dashboard_inner-showcase .business_card-preview .businesscard {
+        height:220px;
+    }
+    .wrapper .address_info {
+        padding: 0;
+    }
+    #product .big_img {
+        height: 15rem;
+    }
+    #product .small_images img {
+        width: 3rem;
+        border-radius: 0;
+    }
+    .wrapper .address_info ul {
+        padding: 0;
+    }
+
+    .wrapper .address_info ul li {
+        width: 100%;
+        background: $light-color-1;
+        border-top: 1px solid $light-color-1;
+        border-bottom: 1px solid $dark-color-1;
+        padding: 1rem 0;
+
+
+    }
+
+    .wrapper .address_info ul li a {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .wrapper .address_info ul li a i {
+        margin-bottom: 1rem;
+        font-size: 2rem;
+    }
+
+    .wrapper .scoail_meadia ul li a {
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        margin: 0.2rem;
+        font-size: 16px;
+    }
+}
+
+// =============================
+//MEDIA-LARGE DEVICE MAX-WIDTH:320PX
+// ===========================
+@media #{$media-mobile-xxs} {
+    #dashboard .dashboard_inner-showcase .business_card-preview .businesscard {
+        height:200px;
+    }
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    h2 {
+        font-size: 1rem;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+    .preview_card .business_card {
+        height: 12rem;
+    }
+    .preview_card .business_card .brand_info #brand_title {
+        font-size: 0.9rem;
+    }
+    .preview_card .business_card .brand_info #brand_subtitle {
+        font-size: 0.6rem;
+    }
+
+    .cuponBx input {
+        border: 0;
+        outline: 0;
+        padding: 1rem;
+        width: 100%;
+        background: none;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid #000;
+        margin-bottom: 1rem;
+    }
+
+    .cuponBx {
+        flex-direction: column;
+        border: 0;
+    }
+
+    .cuponBx button {
+        position: relative;
+        padding: 1rem 2rem;
+
+    }
+
+    #features .features_card-title h2 {
+        margin-top: 0;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        display: none;
+    }
+
+    #our_products .productcard {
+        width: 90%;
+        margin: 1rem auto 0;
+    }
+
+    #features .features_card,
+    #getinconnectmagic .magicCard,
+    #statistics .number_box {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .service_img {
+        width: 90%;
+        height: 250px;
+        margin: auto;
+    }
+
+    #services .services_part .service_list ul li {
+        font-size: 0.7rem;
+        margin: 0;
+    }
+
+    .title {
+        font-size: 1rem;
+    }
+
+    .section_title {
+        font-size: 1.2rem;
+    }
+
+    .section_subtitle {
+        margin-bottom: 4rem;
+        font-size: 0.9rem;
+        padding: 0 3rem;
+    }
+
+    .circle {
+        margin-right: 1rem;
+    }
+
+    .servicebox {
+        padding: 0 0.5rem;
+    }
+
+    lord-icon {
+        width: 80px !important;
+        height: 80px !important;
+    }
+
+    #team_of_getinconnect .profile-card {
+        height: 280px;
+    }
+
+    #product .singleproduct h1 #variant,
+    #product .customproduct h1 #variant {
+        display: block;
+        margin-top: 0.7rem;
+    }
+
+    #how_it_work .cardBox {
+        width: 95%;
+    }
+
+    #how_it_work .cardBox .order_no {
+        left: 1rem;
+    }
+
+    .faq-content .faq-item-text {
+        font-size: 0.8rem;
+    }
+
+    .faq-content .faq-item-body p {
+        font-size: 0.9rem;
+    }
+
+    #cart_bottom .primary_btn {
+        max-width: 100%;
+        padding: 1rem;
+        font-size: 0.8rem;
+    }
+    #checkout .order table td {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+}

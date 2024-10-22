@@ -1,0 +1,111 @@
+//===== COMMON STYLES====//
+
+@import '../utilities/animation';
+@import '../utilities/transform';
+// =====================
+// pargraph style
+// =====================
+
+p {
+    color: $dark-color-8 !important;
+    text-align: justify;
+    line-height: 1.5;
+    font-size: 1rem;
+}
+
+// =====================
+// h1 style
+// =====================
+
+h1 {
+    font-size: clamp(1.4rem, 2vw, 5rem); 
+    text-transform: uppercase;
+    margin: 0.67em 0;
+    font-weight: 900;
+    color: $light-color;
+    letter-spacing: 0.05em;
+}
+h1.dark {
+    font-size: clamp(1.5rem, 2.5vw, 4rem); 
+    text-transform: uppercase;
+    margin: 0.67em 0;
+    font-weight: 900;
+    color: $dark-color;
+    letter-spacing: 0.05em;
+}
+
+// =====================
+// a style
+// =====================
+a {
+    background-color: transparent;
+    text-decoration: none;
+    letter-spacing: 0.05em;
+    transition: all 0.5s ease-in-out;
+    position: relative;
+    
+    // z-index: 2;
+    cursor: pointer;
+
+    &:active {
+        transform: scale(0.8);
+    }
+}
+
+
+
+// =====================
+// h2 style
+// =====================
+h2 {
+    font-size: clamp(1.2rem, 2vw, 2rem); 
+    font-weight: 600;
+    color: $dark-color;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    margin-bottom: 25px;
+}
+h3 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: $dark-color-6;
+    letter-spacing: 0.03em;
+    margin-bottom: 25px;
+    text-align: justify;
+    line-height: 1.5;
+}
+// =====================
+// h4 style
+// =====================
+h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: $light-color-8;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    margin-bottom: 25px;
+}
+h5 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: $light-color-8;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    margin-bottom: 25px;
+}
+.service_title 
+{
+    font-size: clamp(1.5rem, 2.5vw, 3rem); 
+    color: $dark-color;
+    margin-top: 0;
+    margin-bottom: 2rem;
+}
+// =====================
+// paragraph style
+// =====================
+@mixin paragarph($font-family, $font-size, $dark-color) {
+    font-family: $font-family;
+    font-size: $font-size;
+    color: $dark-color;
+}
+

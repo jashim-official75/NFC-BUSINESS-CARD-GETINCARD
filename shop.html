@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="">
+    <meta name="description" content="">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <!-- ==========BOXICON CSS LINK========== -->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- ==========UNICONS CSS LINK========== -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <!-- ==========FONTAWESOME CSS LINK========== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <!-- ==========POPPINS GOOGLE FONT LINK========== -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- ==========GLIGHTBOX CSS LINK========== -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+    <!-- ==========SWIPER SLIDER CSS ========== -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <!-- ==========BOOTSTARP CSS LINK========== -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- ==========CUSTOM CSS LINK========== -->
+    <link rel="stylesheet" href="css/main.css">
+
+    <title>GetInCard for Digital Business Card</title>
+</head>
+<body>
+
+  
+  
+    <!-- ===================================== -->
+    <!-- HEADER PART START -->
+    <!-- ===================================== -->
+    <header id="header" >
+        <div class="menubar fix-top flex_content sticky">
+            <div class="container flex_content ">
+
+                <div class="logo">
+                    <a href="index.html" class="logo"><img src="images/logo.webp" alt=""></a>
+                </div>
+                <nav class="ms-auto" id="menu">
+                    <ul class="flex">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="account.html">Account</a></li>
+                        <li class="ms-auto login"><a href="signin.html">LogIn</a></li>
+                    </ul>
+
+                </nav>
+
+                <div class="mobile_menu d-flex align-items-center g-2">
+                    <div class="cart_part cart-button">
+
+                        <span><i class='bx bx-cart bx-md'></i></span>
+                        <div class="count_number">0</div>
+                    </div>
+                    <div class="humburger" id="humburger">
+                        <span class="l1"></span>
+                        <span class="l2"></span>
+                        <span class="l3"></span>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ===================================== -->
+    <!-- HEADER PART END -->
+    <!-- ===================================== -->
+    
+    <!-- ===================================== -->
+    <!-- SHOPPING CART SIDEBAR START -->
+    <!-- ===================================== -->
+    <aside id="sidebar-cart">
+        <main>
+            <a href="#" class="close-button"><span class="close-icon"><i class="fa-solid fa-xmark"></i></span></a>
+            <h2>Shopping Cart <span class="count">2</span></h2>
+            <ul class="products">
+                <li class="product">
+                    <a href="#" class="product-link">
+                        <span class="product-image">
+                            <img src="images/card-01.webp" alt="Product Photo">
+                        </span>
+                        <span class="product-details">
+                            <h3>Black & White Card</h3>
+                            <span class="qty-price">
+                                <span class="qty">
+                                    <button class="minus-button" id="minus-button-1">-</button>
+                                    <input type="number" id="qty-input-1" class="qty-input" step="1" min="1" max="1000" name="qty-input" value="1" pattern="[0-9]*" title="Quantity" inputmode="numeric">
+                                    <button class="plus-button" id="plus-button-1">+</button>
+                                    <input type="hidden" name="item-price" id="item-price-1" value="12.00">
+                                </span>
+                                <span class="price">$1060.00</span>
+                            </span>
+                        </span>
+                    </a>
+                    <a href="#remove" class="remove-button"><span class="remove-icon">X</span></a>
+                </li>
+                <li class="product">
+                    <a href="#" class="product-link">
+                        <span class="product-image">
+                            <img src="images/card-02.webp" alt="Product Photo">
+                        </span>
+                        <span class="product-details">
+                            <h3>Matte Blue Card</h3>
+                            <span class="qty-price">
+                                <span class="qty">
+                                    <button class="minus-button" id="minus-button-1">-</button>
+                                    <input type="number" id="qty-input-2" class="qty-input" step="1" min="1" max="1000" name="qty-input" value="1" pattern="[0-9]*" title="Quantity" inputmode="numeric">
+                                    <button class="plus-button" id="plus-button-1">+</button>
+                                    <input type="hidden" name="item-price" id="item-price-2" value="12.00">
+                                </span>
+                                <span class="price">$1028.00</span>
+                            </span>
+                        </span>
+                    </a>
+                    <a href="#remove" class="remove-button"><span class="remove-icon">X</span></a>
+                </li>
+            </ul>
+            <div class="totals">
+                <div class="subtotal">
+                    <span class="label">Subtotal:</span> <span class="amount">$2088.00</span>
+                </div>
+            <div class="action-buttons">
+                <a class="view-cart-button" href="cart.html">Cart</a>
+                <a class="checkout-button" href="checkout.html">Checkout <i class='bx bx-right-arrow-alt'></i></a>
+            </div>
+        </main>
+    </aside>
+    <div id="sidebar-cart-curtain"></div>
+    <!-- ===================================== -->
+    <!-- SHOPPING CART SIDEBAR END -->
+    <!-- ===================================== -->
+     <!-- ===================================== -->
+    <!-- OUR PRODUCTS PART START -->
+    <!-- ===================================== -->
+    <section id="our_products">
+        <h1 class="section_title">Our Products</h1>
+        <h2 class="section_subtitle">Lorem ipsum dolor sit amet.</h2>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class=" col-xl-3 col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                    <div class="productcard">
+                            <div class="productcard_inner">
+                              <a href="singleproduct.html">
+                                <div class="productcard_header">
+                                    <div class="productcard_header-img">
+                                        <img src="images/card-01.webp" alt="" class="img-fluid">
+                                    </div>
+                                </div>
+                              </a>
+                                <div class="productcard_footer">
+    
+                                    <h2 class="productcard_title">GetInConnect Black White</h2>
+    
+                                    <div class="product_details pb-3">
+                                        <span class="prices">৳ 1,299.00 </span>
+                                        <div class="addTocart">
+                                            <a href="#" class="addcartBtn">Add to Cart</a>
+                                        </div>
+                                    </div>
+    
+    
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class=" col-xl-3 col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                    <div class="productcard">
+                        <div class="productcard_inner">
+                            <a href="singleproduct.html">
+                                <div class="productcard_header">
+                                    <div class="productcard_header-img">
+                                        <img src="images/card-02.webp" alt="" class="img-fluid">
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="productcard_footer">
+
+                                <h2 class="productcard_title">GetInConnect Metty Blue</h2>
+
+                                <div class="product_details  pb-3">
+                                    <span class="prices">৳ 1,299.00 </span>
+                                    <div class="addTocart">
+                                        <a href="#" class="addcartBtn">Add to Cart</a>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class=" col-xl-3 col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                    <div class="productcard">
+                        <div class="productcard_inner">
+                            <a href="singleproduct.html">
+                                <div class="productcard_header">
+                                    <div class="productcard_header-img">
+                                        <img src="images/card-03.webp" alt="" class="img-fluid">
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="productcard_footer">
+
+                                <h2 class="productcard_title">GetInConnect Gradient White</h2>
+
+                                <div class="product_details  pb-3">
+                                    <span class="prices">৳ 1,299.00 </span>
+                                    <div class="addTocart">
+                                        <a href="#" class="addcartBtn">Add to Cart</a>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class=" col-xl-3 col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                    <div class="productcard">
+                        <div class="productcard_inner">
+                            <a href="singleproduct.html">
+                                <div class="productcard_header">
+                                    <div class="productcard_header-img">
+                                        <img src="images/card-04.webp" alt="" class="img-fluid">
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="productcard_footer">
+
+                                <h2 class="productcard_title">GetInConnect Classic Silver</h2>
+
+                                <div class="product_details  pb-3">
+                                    <span class="prices">৳ 1,299.00 </span>
+                                    <div class="addTocart">
+                                        <a href="#" class="addcartBtn">Add to Cart</a>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class=" col-xl-3 col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                    <div class="productcard">
+                            <div class="productcard_inner">
+                              <a href="singleproduct.html">
+                                <div class="productcard_header">
+                                    <div class="productcard_header-img">
+                                        <img src="images/card-01.webp" alt="" class="img-fluid">
+                                    </div>
+                                </div>
+                              </a>
+                                <div class="productcard_footer">
+    
+                                    <h2 class="productcard_title">GetInConnect Black White</h2>
+    
+                                    <div class="product_details pb-3">
+                                        <span class="prices">৳ 1,299.00 </span>
+                                        <div class="addTocart">
+                                            <a href="#" class="addcartBtn">Add to Cart</a>
+                                        </div>
+                                    </div>
+    
+    
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class=" col-xl-3 col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                    <div class="productcard">
+                        <div class="productcard_inner">
+                            <a href="singleproduct.html">
+                                <div class="productcard_header">
+                                    <div class="productcard_header-img">
+                                        <img src="images/card-02.webp" alt="" class="img-fluid">
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="productcard_footer">
+
+                                <h2 class="productcard_title">GetInConnect Metty Blue</h2>
+
+                                <div class="product_details  pb-3">
+                                    <span class="prices">৳ 1,299.00 </span>
+                                    <div class="addTocart">
+                                        <a href="#" class="addcartBtn">Add to Cart</a>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class=" col-xl-3 col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                    <div class="productcard">
+                        <div class="productcard_inner">
+                            <a href="singleproduct.html">
+                                <div class="productcard_header">
+                                    <div class="productcard_header-img">
+                                        <img src="images/card-03.webp" alt="" class="img-fluid">
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="productcard_footer">
+
+                                <h2 class="productcard_title">GetInConnect Gradient White</h2>
+
+                                <div class="product_details  pb-3">
+                                    <span class="prices">৳ 1,299.00 </span>
+                                    <div class="addTocart">
+                                        <a href="#" class="addcartBtn">Add to Cart</a>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class=" col-xl-3 col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                    <div class="productcard">
+                        <div class="productcard_inner">
+                            <a href="singleproduct.html">
+                                <div class="productcard_header">
+                                    <div class="productcard_header-img">
+                                        <img src="images/card-04.webp" alt="" class="img-fluid">
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="productcard_footer">
+
+                                <h2 class="productcard_title">GetInConnect Classic Silver</h2>
+
+                                <div class="product_details  pb-3">
+                                    <span class="prices">৳ 1,299.00 </span>
+                                    <div class="addTocart">
+                                        <a href="#" class="addcartBtn">Add to Cart</a>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+             
+                <div class=" col-xl-3 col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                    <div class="productcard">
+                            <div class="productcard_inner">
+                              <a href="singleproduct.html">
+                                <div class="productcard_header">
+                                    <div class="productcard_header-img">
+                                        <img src="images/card-01.webp" alt="" class="img-fluid">
+                                    </div>
+                                </div>
+                              </a>
+                                <div class="productcard_footer">
+    
+                                    <h2 class="productcard_title">GetInConnect Black White</h2>
+    
+                                    <div class="product_details pb-3">
+                                        <span class="prices">৳ 1,299.00 </span>
+                                        <div class="addTocart">
+                                            <a href="#" class="addcartBtn">Add to Cart</a>
+                                        </div>
+                                    </div>
+    
+    
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class=" col-xl-3 col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                    <div class="productcard">
+                        <div class="productcard_inner">
+                            <a href="singleproduct.html">
+                                <div class="productcard_header">
+                                    <div class="productcard_header-img">
+                                        <img src="images/card-02.webp" alt="" class="img-fluid">
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="productcard_footer">
+
+                                <h2 class="productcard_title">GetInConnect Metty Blue</h2>
+
+                                <div class="product_details  pb-3">
+                                    <span class="prices">৳ 1,299.00 </span>
+                                    <div class="addTocart">
+                                        <a href="#" class="addcartBtn">Add to Cart</a>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class=" col-xl-3 col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                    <div class="productcard">
+                        <div class="productcard_inner">
+                            <a href="singleproduct.html">
+                                <div class="productcard_header">
+                                    <div class="productcard_header-img">
+                                        <img src="images/card-03.webp" alt="" class="img-fluid">
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="productcard_footer">
+
+                                <h2 class="productcard_title">GetInConnect Gradient White</h2>
+
+                                <div class="product_details  pb-3">
+                                    <span class="prices">৳ 1,299.00 </span>
+                                    <div class="addTocart">
+                                        <a href="#" class="addcartBtn">Add to Cart</a>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class=" col-xl-3 col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                    <div class="productcard">
+                        <div class="productcard_inner">
+                            <a href="singleproduct.html">
+                                <div class="productcard_header">
+                                    <div class="productcard_header-img">
+                                        <img src="images/card-04.webp" alt="" class="img-fluid">
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="productcard_footer">
+
+                                <h2 class="productcard_title">GetInConnect Classic Silver</h2>
+
+                                <div class="product_details  pb-3">
+                                    <span class="prices">৳ 1,299.00 </span>
+                                    <div class="addTocart">
+                                        <a href="#" class="addcartBtn">Add to Cart</a>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class=" col-xl-3 col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                    <div class="productcard">
+                            <div class="productcard_inner">
+                              <a href="singleproduct.html">
+                                <div class="productcard_header">
+                                    <div class="productcard_header-img">
+                                        <img src="images/card-01.webp" alt="" class="img-fluid">
+                                    </div>
+                                </div>
+                              </a>
+                                <div class="productcard_footer">
+    
+                                    <h2 class="productcard_title">GetInConnect Black White</h2>
+    
+                                    <div class="product_details pb-3">
+                                        <span class="prices">৳ 1,299.00 </span>
+                                        <div class="addTocart">
+                                            <a href="#" class="addcartBtn">Add to Cart</a>
+                                        </div>
+                                    </div>
+    
+    
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class=" col-xl-3 col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                    <div class="productcard">
+                        <div class="productcard_inner">
+                            <a href="singleproduct.html">
+                                <div class="productcard_header">
+                                    <div class="productcard_header-img">
+                                        <img src="images/card-02.webp" alt="" class="img-fluid">
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="productcard_footer">
+
+                                <h2 class="productcard_title">GetInConnect Metty Blue</h2>
+
+                                <div class="product_details  pb-3">
+                                    <span class="prices">৳ 1,299.00 </span>
+                                    <div class="addTocart">
+                                        <a href="#" class="addcartBtn">Add to Cart</a>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class=" col-xl-3 col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                    <div class="productcard">
+                        <div class="productcard_inner">
+                            <a href="singleproduct.html">
+                                <div class="productcard_header">
+                                    <div class="productcard_header-img">
+                                        <img src="images/card-03.webp" alt="" class="img-fluid">
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="productcard_footer">
+
+                                <h2 class="productcard_title">GetInConnect Gradient White</h2>
+
+                                <div class="product_details  pb-3">
+                                    <span class="prices">৳ 1,299.00 </span>
+                                    <div class="addTocart">
+                                        <a href="#" class="addcartBtn">Add to Cart</a>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class=" col-xl-3 col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                    <div class="productcard">
+                        <div class="productcard_inner">
+                            <a href="singleproduct.html">
+                                <div class="productcard_header">
+                                    <div class="productcard_header-img">
+                                        <img src="images/card-04.webp" alt="" class="img-fluid">
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="productcard_footer">
+
+                                <h2 class="productcard_title">GetInConnect Classic Silver</h2>
+
+                                <div class="product_details  pb-3">
+                                    <span class="prices">৳ 1,299.00 </span>
+                                    <div class="addTocart">
+                                        <a href="#" class="addcartBtn">Add to Cart</a>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+             
+            </div>
+            <a href="customproduct.html" class="primary_btn viewall_btn">Order Custom Card</a>
+        </div>
+    </section>
+    <!-- ===================================== -->
+    <!-- OUR PRODUCTS PART END -->
+    <!-- ===================================== -->
+
+
+    <!-- ===================================== -->
+    <!--  FOOTER  SECTION START -->
+    <!-- ===================================== -->
+    <div class="footer">
+        <div class="container">     
+            <div class="row">                       
+                <div class="col-xl-2 col-lg-4 col-sm-6 col-xs-12">
+                    <div class="single_footer">
+                        <h4>Navigate</h4>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="shop.html">Shop</a></li>
+                            <li><a href="account.html">Account</a></li>
+                            <li><a href="login.html">Login</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-lg-4 col-sm-6 col-xs-12">
+                    <div class="single_footer single_footer_address">
+                        <h4>Shop</h4>
+                        <ul>
+                            <li><a href="#">White & Black</a></li>
+                            <li><a href="#">Gradient White</a></li>
+                            <li><a href="#">Classic Silver</a></li>
+                            <li><a href="#">Classic Golden</a></li>
+                            <li><a href="#">Classic Blue</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-sm-12 col-xs-12">
+                    <div class="single_footer single_footer_address">
+                        <h4>Address</h4>
+                      <address>
+                        <ul>
+                            
+                            <li><span>GETINCARD</span></li>
+                            <li><span>72/1, D.I.T. Road</span> </li>
+                            <li><span> RH Home Center, Level-3, Suite <br> No-324, Green Road, Farmgate 1215 Dhaka</span></li>
+                            <li><i class='bx bx-phone' ></i><span> Phone: <a href="tel:+01728953211">01728953211</a></span></li>
+                            <li><span><i class='bx bx-envelope ' ></i> Email:</span> <a href="mailto:Info@getincard.com">Info@getincard.com</a> </li>
+                        </ul>
+                      </address>
+                       
+                    </div>
+                                         
+                </div>  
+                <div class="col-xl-4 col-md-12  col-xs-12">
+                    <div class="single_footer single_footer_address px-0">
+                        <h4>Subscribe today</h4>
+                        <div class="signup_form">                           
+                            <form action="#" class="subscribe">
+                                <input type="text" class="subscribe__input" placeholder="Enter Email Address">
+                                <button type="button" class="subscribe__btn"><i class="fas fa-paper-plane"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="social_profile">
+                        <ul>
+                           <li> <a href="" target="_blank" style="--i:#4267B2;"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="" target="_blank" style="--i:#FF0000;"><i class="uil uil-youtube"></i></a></li>
+                            <li><a href="" target="_blank" style="--i:#1DA1F2;"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="" target="_blank" class="instagram_bg"><i class="fab fa-instagram"></i></a></li>
+                            <li><a href="" target="_blank" style="--i:#E60023;"><i class="fab fa-pinterest-p"></i></a></li>
+                            <li><a href="" target="_blank" style="--i:#0072b1;"><i class="fab fa-linkedin-in"></i></a></li>
+                        </ul>
+                    </div>                          
+                </div>       
+            </div> 
+            <div class="row">
+                <div class="col-lg-12 col-sm-12 col-xs-12">
+                    <p class="copyright text-light">Copyright © 2022 <a href="https://getinconnect.com" target="_blank">GETINCARD</a></p>
+                </div>                
+            </div>                
+        </div>
+    </div>
+    <!-- ===================================== -->
+    <!--  FOOTER  SECTION END -->
+    <!-- ===================================== -->
+
+
+   <!-- ==========JS HERE========== -->
+     <!-- ==========COUNTERUP JS LINK ========== -->
+   
+    <!-- ==========MAIN JQUREY LINK========== -->
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    
+    <!-- ==========BOOTSTARP JS LINK========== -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+     <!-- ==========COUNTERUP JS LINK ========== -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+    <script src="https://bfintal.github.io/Counter-Up/jquery.counterup.min.js"></script>
+    <!-- ==========SWIPER SLIDER JS ========== -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <!-- ==========BOXICONS  JS========== -->
+    <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
+    <!-- ==========LORDICONS  JS========== -->
+    <script src="https://cdn.lordicon.com/pzdvqjsp.js"></script>
+  
+    <!-- ==========GLIGHTBOX JS LINK ========== -->
+    <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+    <!-- ==========CUSTOM JS ========== -->
+    <script src="js/app.js"></script>
+    <script>
+        // GLightbox();
+       
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,99 @@
+header 
+{
+    nav 
+{
+    // flex: 1;
+    ul 
+    {
+        margin: 0;
+        padding: 0;
+        li 
+        {
+            list-style: none; 
+            padding: 0 1rem ;
+            a 
+            {
+                display: inline-block;
+                color: $light-color-6;
+                @include transition(0.3s ease-in-out);
+                position: relative;
+                
+                &::after 
+                {
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 1px;
+                    background: $light-color;
+                    @include transform(scaleX(0));
+                    @include transition(0.3s ease-in-out);
+                    transform-origin: center;
+                }
+                &:hover::after 
+                {
+                    @include transform(scaleX(1));
+               
+                    transform-origin: center;
+                } 
+                &:hover 
+                {
+                    color: $light-color;
+
+                }
+            }
+        }
+    }
+}
+
+}
+.cart_part 
+{
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+    &:hover 
+    {
+        .count_number  
+        {
+            background: $light-color;
+            color: $dark-color;
+            
+        }
+    }
+    span 
+    {
+        color: $light-color-8;
+    }
+    .count_number 
+    {
+        position: absolute;
+        top: 0rem;
+        right: -0.5rem;
+        width: 1.2rem;
+        height: 1.2rem;
+        background: $dark-color;
+        color: $light-color;
+      text-align: center;
+      line-height: 1.2rem;
+        @include border-radius(5rem);
+    }
+    ul 
+    {
+        margin: 0;
+        padding: 0;
+        li 
+        {
+            list-style: none;
+            a 
+            {
+                color: $light-color;
+                i 
+                {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+}

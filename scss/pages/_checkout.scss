@@ -1,0 +1,269 @@
+#checkout {
+    padding-top: 8rem;
+    background: $primary-color;
+
+    label {
+        font-size: 1rem;
+        color: $light-color;
+    }
+
+    h2,
+    h3 {
+        text-transform: capitalize;
+        color: $light-color;
+        margin-bottom: 0;
+        margin-top: 1rem;
+    }
+   #login 
+   {
+    text-decoration: underline;
+   }
+    .chekout_form {
+        position: relative;
+
+        .account_form {
+            padding: 1rem 0;
+            background: $primary-color;
+        }
+
+        .customer_information {
+            @extend .flex;
+            align-items: center;
+            justify-content: space-between;
+            color: $light-color;
+            margin-bottom: 1rem;
+
+
+            a {
+                color: $light-color-6;
+
+                &:hover {
+                    color: $light-color;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    #toggleLogin {
+        display: none;
+
+        .option_text {
+            p {
+                color: $light-color-6 !important;
+                margin-top: 1rem;
+            }
+        }
+    }
+
+    .billing_form {
+        margin: 2rem 0;
+
+        .billing_information {
+            margin-bottom: 1rem;
+        }
+
+        select {
+            color: $light-color-6;
+
+            option {
+                background: $dark-color;
+            }
+        }
+    }
+.payment_form 
+{
+    .primary_btn 
+    {
+        min-width: 80%;
+    }
+}
+    ul {
+        margin: 0;
+        padding: 0;
+        li {
+            img 
+            {
+                width: 10rem;
+                margin-left: 1rem;
+            }
+            color: $light-color-6;
+            display: block;
+            position: relative;
+            width: 100%;
+            height: 6rem;
+            border-bottom: 0.1rem solid $light-color-1;
+
+            input[type="radio"] {
+                position: absolute;
+                visibility: hidden;
+
+            }
+
+            input[type="radio"]:checked~.check {
+                border: 0.2rem solid $light-color;
+            }
+
+            input[type=radio]:checked~.check::before {
+                background: $light-color;
+            }
+
+            input[type=radio]:checked~label {
+                color: $light-color;
+            }
+
+            &:hover label {
+                color: $light-color;
+            }
+
+            label {
+                display: block;
+                position: relative;
+                font-weight: 300;
+                font-size: 1.4rem;
+                padding: 2rem 1rem 2rem 5rem;
+                margin: 2rem auto 0;
+                height: 1rem;
+                top: -0.2rem;
+                z-index: 9;
+                cursor: pointer;
+                @include transition(all 0.25s linear)
+            }
+
+            &:hover .check {
+                border: 0.2rem solid $light-color;
+            }
+
+            .check {
+                display: block;
+                position: absolute;
+                border: 0.2rem solid $light-color-6;
+                @include border-radius(50%);
+                height: 2rem;
+                width: 2rem;
+                top: 30px;
+                left: 20px;
+                z-index: 5;
+                @include transition(border .25s linear);
+
+                &::before {
+                    display: block;
+                    position: absolute;
+                    content: '';
+                    @include border-radius(50%);
+                    height: 0.5rem;
+                    width: 0.5rem;
+                    top: 35%;
+                    left: 33%;
+                    margin: auto;
+                    @include transition(background 0.25s linear);
+                }
+            }
+        }
+    }
+.order
+{
+    background: $light-color-1;
+    @include border-radius(1.5rem);
+    border: 0.01rem solid $light-color-4;
+    table 
+{
+    width: 100%;
+    text-align: left;
+    padding: 1rem;
+   
+    
+    thead 
+    {
+      
+        th 
+        {
+            font-size: 1.6rem;
+            padding-left: 1rem;
+        }
+    }
+        tr 
+        {
+            padding-bottom: 1rem;
+            color: $light-color;
+            height: 5rem;
+            border-bottom: 0.1rem dashed $light-color-4;
+            &:nth-child(3)
+            {
+                border-bottom: none;
+            }
+        }
+        td 
+        {
+            padding-left: 1rem;
+        }
+    .product {
+        display: flex;
+        align-items: center;
+        color: $light-color;
+        gap: 1rem;
+        img 
+        {
+                width: 60px;
+                border-radius: 10px;
+        }
+    }
+}
+}
+#cupon 
+{
+    color: $light-color-6;
+    margin: 2rem 0;
+    display: block;
+    &:hover 
+    {
+        text-decoration: underline;
+        color: $light-color;
+    }
+   
+}
+.coupon 
+{
+    
+   .apply_btn
+   {
+    border: 0;
+    outline: 0;
+    padding: 1rem;
+    height: 100%;
+    width: 10rem;
+    background: $secondary-color;
+    color: $light-color;
+   
+    &:hover 
+    {
+        background: $dark-color;
+        color: $light-color;
+    }
+   }
+   input 
+   {
+    border: 0;
+    box-sizing: border-box;
+    outline: 0;
+    padding: 0;
+    padding-left: 1rem;
+    height: 3rem;
+   }
+}
+}
+
+
+
+#cuponBox 
+{
+    position: relative;
+    display: none;
+    
+    .apply_btn 
+    {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+}

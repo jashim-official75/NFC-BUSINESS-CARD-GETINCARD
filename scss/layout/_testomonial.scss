@@ -1,0 +1,130 @@
+#testomonials
+{
+    background: $primary-color;
+    h1 
+    {
+        color: $light-color;
+    }
+    .swiper-slide
+    {
+        position: relative;
+        background: $light-color-1;
+        padding: 1rem;
+        backdrop-filter: blur(2rem);
+        border: 0.1rem solid $light-color-4;
+        @include border-radius(1.5rem);
+        @include box-shadow(0 0.5rem 2rem $dark-color-1);
+    }
+    .testomonial_card 
+        {
+            position: relative;
+            color: $light-color;
+       
+        
+            &-profile 
+            {
+                position: absolute;
+                top: -25%;
+                left: 50%;
+
+                @include transform(translateX(-50%) scale(0.9));
+                img 
+                {
+                    @include border-radius(5rem);
+                    @include box-shadow(0 0 0 0.5rem $light-color-1 ,0 0 0 1rem $light-color-1); 
+                }
+            }
+
+            &-quote 
+            {
+                i 
+                {
+                    font-size: 4rem;
+                }
+            }
+            &-thoughts 
+            {
+                padding: 1rem 0.3rem;
+                p 
+                {
+                    color: $light-color-8 !important;
+                    text-align: center;
+                }
+            }
+            &-userinfo 
+            {
+                text-align: center;
+              h2 
+              {
+                color: $light-color;
+                font-size: 1.8rem;
+                span 
+              {
+                
+                font-size: 1rem;
+                display: block;
+                color: $light-color-6;
+                margin-top: 0.5rem;
+              }
+              }
+            }
+        }
+}
+.mySwiper1 
+{
+    margin-top: 5rem;
+}
+
+.mySwiper1 .swiper-slide 
+{
+    background-position: center;
+    background-size: cover;
+    width: 320px;
+}
+
+.mySwiper1 .swiper-wrapper
+{
+    width: 100%;
+ padding: 5rem 0;
+}
+
+span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background-color: $light-color-4;
+    opacity: 1;
+    @include transform(scale(1.1));
+    @include box-shadow(0 0 0 0.2rem  $light-color-2);
+    
+  }
+  
+  /* target all bullets */
+  .swiper-pagination-bullet {
+    background-color: $light-color-1;
+    opacity: 1;
+    border: 0.2rem solid $light-color-6;
+    display: inline-block;
+        width: 1.5rem;
+        height: 1.5rem;
+        margin: 2rem;
+        @include transform(scale(0.8));
+  }
+
+  .mySwiper1  .swiper-button-next,
+  .mySwiper1 .swiper-button-prev {
+      background-color: $light-color-8;
+      border: 0.2rem solid $light-color;
+      top: 50%;
+      @include transform(translateY(-50%));
+     right: 1rem;
+      padding: 2rem;
+      color: $light-color !important;
+      fill: black !important;
+      @include border-radius(5rem);
+      stroke: black !important;
+      margin: 0;
+      background: none;
+      &:hover 
+  {
+      background: $light-color;
+      color: $dark-color !important;
+  }
+  }

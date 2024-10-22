@@ -1,0 +1,35 @@
+#designportfolio 
+{
+    position: relative;
+    .swiper-slide 
+    {
+        overflow: hidden;
+    }
+    img 
+    {
+        display: block;
+        @include border-radius(1.5rem);
+    }
+
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    background-color: $light-color;
+    background-color: $light-color-8;
+    border: 0.2rem solid $light-color;
+    top: 50%;
+    @include transform(translateY(-50%));
+   right: 1rem;
+    padding: 2rem;
+    color: $primary-color !important;
+    fill: black !important;
+    @include border-radius(5rem);
+    stroke: black !important;
+    user-select: none;
+    margin: 0;
+    &:hover 
+{
+    background: $light-color;
+}
+}

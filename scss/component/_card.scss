@@ -1,0 +1,65 @@
+#getinconnectmagic 
+{
+    background: $light-gray;
+    .magicCard 
+    {
+
+        text-align: center;
+        background: $light-color;
+        padding: 1rem;
+        min-height: 22rem;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+         lord-icon 
+         {
+            background: $light-color-8 !important;
+            border: 0.2rem solid $light-color-4 !important;
+            @include box-shadow(0 0 0 0.5rem $light-color-1);
+            padding: 1rem !important;
+         }
+        @include border-radius(1.5rem);
+        &:hover 
+        {
+            background: $primary-color;
+            color: $light-color !important;
+        }
+
+        &:hover  lord-icon
+        {
+            background: $light-color-8 !important;
+            border: 0.2rem solid $light-color-4;
+            @include box-shadow(0 0 0 0.5rem $light-color-1);
+            @include border-radius(5rem);
+            @include transform(scale(0.8));
+            // width: 10rem !important;
+            // height: 10rem !important;
+            @include transition(0.3s);
+            padding: 1rem;
+        }
+        &:hover  h2
+        {
+            color: $light-color !important;
+        }
+        &:hover  p
+        {
+            color: $light-color-8 !important;
+        }
+        &_title 
+        {
+            h2 
+            {
+                font-size: clamp(1.4rem, 2vw, 1.4rem); 
+                color: $secondary-color;
+                font-weight: 700;
+            }
+        }
+        &_desc 
+        {
+            p 
+            {
+                color: $dark-color-6 !important;
+                font-weight: 500;
+                text-align: center;
+            }
+        }
+    }
+}

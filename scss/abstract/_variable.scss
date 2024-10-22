@@ -1,0 +1,48 @@
+
+// ===================================== //
+// SOLID COLOR
+// ===================================== //
+
+
+$primary-color:#7239D6;
+$secondary-color: #4A1F96;
+$primary-color-1:rgba($primary-color,0.5);
+$secondary-color-1:rgba($secondary-color,0.8); 
+$light-color:#fff;
+$light-gray:#F7F7F7;
+$dark-color:#000;
+
+// ===================================== //
+// ALPHA COLOR
+// ===================================== //
+$dark-color-1: rgba(0,0,0,0.2);
+$dark-color-2: rgba(0,0,0,0.3);
+$dark-color-4: rgba(0,0,0,0.4);
+$dark-color-6: rgba(0,0,0,0.6);
+$dark-color-8: rgba(0,0,0,0.8);
+$dark-color-5: rgba($dark-color, 0.5);
+$light-color-1:rgba(255, 255, 255, 0.1);
+$light-color-2:rgba(255, 255, 255, 0.2);
+$light-color-3:rgba(255, 255, 255, 0.3);
+$light-color-4:rgba(255, 255, 255, 0.4);
+$light-color-6:rgba(255, 255, 255, 0.6);
+$light-color-8:rgba(255, 255, 255, 0.8);
+$light-color-1:rgba($light-color,0.1);
+$half-light:rgba($light-color, 0.5);
+
+$gradient: linear-gradient(to top, $primary-color-1 , $secondary-color-1);
+$gradient-1: linear-gradient(to left, $primary-color , $secondary-color);
+$gradient-2: linear-gradient(to left, $light-color-6 , $light-color-8);
+
+// ===================================== //
+// DEFAULT SHADOW
+// ===================================== //
+
+$shadow: 0 0.5rem 2rem rgba($dark-color, 0.15) !default;
+
+// ===================================== //
+// FONT VARIABLES
+// ===================================== //
+
+$poppins: 'Poppins', sans-serif;
+

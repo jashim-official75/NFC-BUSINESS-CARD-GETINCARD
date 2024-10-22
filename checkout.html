@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="">
+    <meta name="description" content="">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <!-- ==========BOXICON CSS LINK========== -->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- ==========UNICONS CSS LINK========== -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <!-- ==========FONTAWESOME CSS LINK========== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <!-- ==========POPPINS GOOGLE FONT LINK========== -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- ==========GLIGHTBOX CSS LINK========== -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+    <!-- ==========SWIPER SLIDER CSS ========== -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <!-- ==========BOOTSTARP CSS LINK========== -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- ==========CUSTOM CSS LINK========== -->
+    <link rel="stylesheet" href="css/main.css">
+
+    <title>GetInCard for Digital Business Card</title>
+</head>
+
+<body>
+
+
+  <!-- ===================================== -->
+    <!-- HEADER PART START -->
+    <!-- ===================================== -->
+    <header id="header" >
+        <div class="menubar fix-top flex_content sticky">
+            <div class="container flex_content ">
+
+                <div class="logo">
+                    <a href="index.html" class="logo"><img src="images/logo.webp" alt=""></a>
+                </div>
+                <nav class="ms-auto" id="menu">
+                    <ul class="flex">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="account.html">Account</a></li>
+                        <li class="ms-auto login"><a href="signin.html">LogIn</a></li>
+                    </ul>
+
+                </nav>
+
+                <div class="mobile_menu d-flex align-items-center g-2">
+                    <div class="cart_part cart-button">
+
+                        <span><i class='bx bx-cart bx-md'></i></span>
+                        <div class="count_number">0</div>
+                    </div>
+                    <div class="humburger" id="humburger">
+                        <span class="l1"></span>
+                        <span class="l2"></span>
+                        <span class="l3"></span>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ===================================== -->
+    <!-- HEADER PART END -->
+    <!-- ===================================== -->
+
+    <!-- ===================================== -->
+    <!-- SHOPPING CART SIDEBAR START -->
+    <!-- ===================================== -->
+    <aside id="sidebar-cart">
+        <main>
+            <a href="#" class="close-button"><span class="close-icon"><i class="fa-solid fa-xmark"></i></span></a>
+            <h2>Shopping Cart <span class="count">2</span></h2>
+            <ul class="products">
+                <li class="product">
+                    <a href="#" class="product-link">
+                        <span class="product-image">
+                            <img src="images/card-01.webp" alt="Product Photo">
+                        </span>
+                        <span class="product-details">
+                            <h3>Black & White Card</h3>
+                            <span class="qty-price">
+                                <span class="qty">
+                                    <button class="minus-button" id="minus-button-1">-</button>
+                                    <input type="number" id="qty-input-1" class="qty-input" step="1" min="1" max="1000"
+                                        name="qty-input" value="1" pattern="[0-9]*" title="Quantity"
+                                        inputmode="numeric">
+                                    <button class="plus-button" id="plus-button-1">+</button>
+                                    <input type="hidden" name="item-price" id="item-price-1" value="12.00">
+                                </span>
+                                <span class="price">$1060.00</span>
+                            </span>
+                        </span>
+                    </a>
+                    <a href="#remove" class="remove-button"><span class="remove-icon">X</span></a>
+                </li>
+                <li class="product">
+                    <a href="#" class="product-link">
+                        <span class="product-image">
+                            <img src="images/card-02.webp" alt="Product Photo">
+                        </span>
+                        <span class="product-details">
+                            <h3>Matte Blue Card</h3>
+                            <span class="qty-price">
+                                <span class="qty">
+                                    <button class="minus-button" id="minus-button-1">-</button>
+                                    <input type="number" id="qty-input-2" class="qty-input" step="1" min="1" max="1000"
+                                        name="qty-input" value="1" pattern="[0-9]*" title="Quantity"
+                                        inputmode="numeric">
+                                    <button class="plus-button" id="plus-button-1">+</button>
+                                    <input type="hidden" name="item-price" id="item-price-2" value="12.00">
+                                </span>
+                                <span class="price">$1028.00</span>
+                            </span>
+                        </span>
+                    </a>
+                    <a href="#remove" class="remove-button"><span class="remove-icon">X</span></a>
+                </li>
+            </ul>
+            <div class="totals">
+                <div class="subtotal">
+                    <span class="label">Subtotal:</span> <span class="amount">$2088.00</span>
+                </div>
+                <div class="action-buttons">
+                    <a class="view-cart-button" href="cart.html">Cart</a>
+                    <a class="checkout-button" href="checkout.html">Checkout <i class='bx bx-right-arrow-alt'></i></a>
+                </div>
+        </main>
+    </aside>
+    <div id="sidebar-cart-curtain"></div>
+    <!-- ===================================== -->
+    <!-- SHOPPING CART SIDEBAR END -->
+    <!-- ===================================== -->
+
+    <!-- ===================================== -->
+    <!--  CHECKOUT PART START -->
+    <!-- ===================================== -->
+    <section id="checkout">
+
+        <div class="container-md">
+            <h1 class="d-flex align-items-center justify-content-center"><span class="circle-white"></span> Complete
+                Your Order</h1>
+            <hr>
+            <div class="row">
+                <div class="col-lg-7 col-md-12 mb-4">
+                    <div class="chekout_form">
+                        <div class="customer_information">
+                            <h2>Customer Information</h2>
+                            <div>
+                                <span>Already have an account? <span id="login">Login</span></span>
+                            </div>
+                        </div>
+                        <form action="#">
+                            <div class="account_form">
+                                <div class="inputBx">
+                                    <label for="username"> Email Address <span class="required">*</span> </label>
+                                    <input type="email" autofocus="" autocapitalize="none" autocomplete="email"
+                                        placeholder="Email Address" id="email" required>
+                                </div>
+
+                                <div id="toggleLogin">
+                                    <div class="inputBx">
+                                        <label for="password">Password <span class="required">*</span></label>
+                                        <div class="password_wrapper">
+                                            <input type="password" autocomplete="current-password"
+                                                placeholder="Password" id="password" required>
+                                            <span>
+                                                <i class="fa-regular fa-eye" id="eye" onclick="togglepass();"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="checked"> <span><input type="checkbox" name="keepsign" id="keepsign"
+                                                autocomplete="current-password"> <label for="keepsign">Keep me signed
+                                                in</label></span> <span><a href="#">Forgot Password?</a></span></div>
+
+                                    <div class="account_btns">
+                                        <input type="submit" value="Login" class="primary_btn">
+                                    </div>
+                                    <span class="option_text">
+                                        <p>Login is optional, you can continue with your order below.</p>
+                                    </span>
+                                </div>
+
+                            </div>
+                        </form>
+                        <div class="billing_form">
+                            <div class="billing_information">
+                                <h2>Billing & Shipping Information</h2>
+                            </div>
+                            <form action="#">
+                                <div class="inputGroup row">
+                                    <div class="inputBx w-50">
+                                        <label for="firstname"> First Name <span class="required">*</span> </label>
+                                        <input type="text" name="firstname" id="firstname" placeholder="First Name">
+                                    </div>
+                                    <div class="inputBx w-50">
+                                        <label for="lastname"> Last Name <span class="required">*</span> </label>
+                                        <input type="text" name="lastname" id="lastname" placeholder="Last Name">
+                                    </div>
+                                </div>
+                                <div class="inputBx">
+                                    <label for="email"> Email <span class="required">*</span> </label>
+                                    <input type="email" name="email" id="email" placeholder="Email">
+                                </div>
+                                <div class="inputBx">
+                                    <label for="phone"> Phone <span class="required">*</span> </label>
+                                    <input type="number" name="phone" id="phone" placeholder="Phone">
+                                </div>
+                                <div class="inputBx">
+                                    <label for="divison"> Division / Town <span class="required">*</span> </label>
+                                    <select name="divison">
+                                        <option selected id="town">Town Or Division</option>
+                                        <option value="dhaka">Dhaka</option>
+                                        <option value="chittagong">Chittagong </option>
+                                        <option value="barisal">Barisal</option>
+                                        <option value="khulna">Khulna</option>
+                                        <option value="rajshahi">Rajshahi</option>
+                                        <option value="rangpur">Rangpur</option>
+                                        <option value="syhlet">Syhlet</option>
+                                        <option value="mymensingh">Mymensingh</option>
+                                    </select>
+                                </div>
+                                <div class="inputBx">
+                                    <label for="district"> District<span class="required">*</span> </label>
+                                    <select name="district">
+                                        <option selected disabled>District</option>
+                                        <option value="Bagerhat">Bagerhat</option>
+                                        <option value="Bandarban">Bandarban</option>
+                                        <option value="Barguna">Barguna</option>
+                                        <option value="Barisal">Barisal</option>
+                                        <option value="Bhola">Bhola</option>
+                                        <option value="Bogra">Bogra</option>
+                                        <option value="Brahmanbaria">Brahmanbaria</option>
+                                        <option value="Chandpur">Chandpur</option>
+                                        <option value="Chittagong">Chittagong</option>
+                                        <option value="Chuadanga">Chuadanga</option>
+                                        <option value="Comilla">Comilla</option>
+                                        <option value="Cox'sBazar">Cox'sBazar</option>
+                                        <option value="Dhaka">Dhaka</option>
+                                        <option value="Dinajpur">Dinajpur</option>
+                                        <option value="Faridpur">Faridpur</option>
+                                        <option value="Feni">Feni</option>
+                                        <option value="Gaibandha">Gaibandha</option>
+                                        <option value="Gazipur">Gazipur</option>
+                                        <option value="Gopalganj">Gopalganj</option>
+                                        <option value="Habiganj">Habiganj</option>
+                                        <option value="Jaipurhat">Jaipurhat</option>
+                                        <option value="Jamalpur">Jamalpur</option>
+                                        <option value="Jessore">Jessore</option>
+                                        <option value="Jhalokati">Jhalokati</option>
+                                        <option value="Jhenaidah">Jhenaidah</option>
+                                        <option value="Khagrachari">Khagrachari</option>
+                                        <option value="Khulna">Khulna</option>
+                                        <option value="Kishoreganj">Kishoreganj</option>
+                                        <option value="Kurigram">Kurigram</option>
+                                        <option value="Kushtia">Kushtia</option>
+                                        <option value="Lakshmipur">Lakshmipur</option>
+                                        <option value="Lalmonirhat">Lalmonirhat</option>
+                                        <option value="Madaripur">Madaripur</option>
+                                        <option value="Magura">Magura</option>
+                                        <option value="Manikganj">Manikganj</option>
+                                        <option value="Maulvibazar">Maulvibazar</option>
+                                        <option value="Meherpur">Meherpur</option>
+                                        <option value="Munshiganj">Munshiganj</option>
+                                        <option value="Mymensingh">Mymensingh</option>
+                                        <option value="Naogaon">Naogaon</option>
+                                        <option value="Narail">Narail</option>
+                                        <option value="Narayanganj">Narayanganj</option>
+                                        <option value="Narsingdi">Narsingdi</option>
+                                        <option value="Natore">Natore</option>
+                                        <option value="Nawabganj">Nawabganj</option>
+                                        <option value="Netrokona">Netrokona</option>
+                                        <option value="Nilphamari">Nilphamari</option>
+                                        <option value="Noakhali">Noakhali</option>
+                                        <option value="Pabna">Pabna</option>
+                                        <option value="Panchagarh">Panchagarh</option>
+                                        <option value="Patuakhali">Patuakhali</option>
+                                        <option value="Pirojpur">Pirojpur</option>
+                                        <option value="Rajbari">Rajbari</option>
+                                        <option value="Rajshahi">Rajshahi</option>
+                                        <option value="Rangamati">Rangamati</option>
+                                        <option value="Rangpur">Rangpur</option>
+                                        <option value="Satkhira">Satkhira</option>
+                                        <option value="Shariatpur">Shariatpur</option>
+                                        <option value="Sherpur">Sherpur</option>
+                                        <option value="Sirajganj">Sirajganj</option>
+                                        <option value="Sunamganj">Sunamganj</option>
+                                        <option value="Sylhet">Sylhet</option>
+                                        <option value="Tangail">Tangail</option>
+                                        <option value="Thakurgaon">Thakurgaon</option>
+                                    </select>
+
+                                </div>
+                                <label for="district"> Country / Region <span class="required">*</span> </label>
+                                <h3>Bangladesh</h3>
+                            </form>
+                        </div>
+                        <div class="payment_form">
+                            <div class="payment">
+                                <h2>Payment</h2>
+                            </div>
+                            <form action="#">
+                                <h6 class="mt-5 text-light">Select Your Payment Method:</h6>
+
+                                <ul>
+                                    <li>
+                                        <input type="radio" id="payonline" name="selector">
+                                        <label for="payonline">Pay Online <span><img src="images/ssl_commerz.png"
+                                                    alt=""></span> </label>
+
+                                        <div class="check"></div>
+                                    </li>
+
+                                    <li>
+                                        <input type="radio" id="cashon" name="selector">
+                                        <label for="cashon">Cash On Devlivary</label>
+
+                                        <div class="check">
+                                            <div class="inside"></div>
+                                        </div>
+                                    </li>
+
+                                </ul>
+                                <div class="checked mt-5"> <span><input type="checkbox" name="agree" id="agree"
+                                    autocomplete="current-password"> <label for="agree" class="ml-4 d-inline-block"> I have read and agree to the website *</label></span></div>
+                                    <button type="submit" class="place_order"><i class="fa fa-lock"></i> &nbsp; Place Order  </button>
+                            </form>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-lg-5 col-md-12 ps-xl-5">
+                    <h2 class="mb-4">Your Order</h2>
+                    <div class="order">
+                       
+                        <table class="product_info">
+                           <thead>
+                            <tr>
+                                <th>Product</th>
+                                <th>Subtotal</th>
+                            </tr>
+                           </thead>
+                           <tbody>
+                            <tr>
+                                <td>
+                                    <div class="product">
+                                        <img src="images/card-01.webp" alt=""> 
+                                        <div>Black & White card</div>
+                                        <div>&nbsp;</div>
+                                        <div>&nbsp;</div>
+                                        <div>x1</div>
+
+                                    </div>
+                                </td>
+                                <td>
+                                    <span>৳ 1,299.00</span>
+                                </td>
+                            </tr>
+                           </tbody>
+                           <tfoot>
+                            <tr>
+                                <td>Subtotal</td>
+                                <td>৳1,299.00</td>
+                            </tr>
+                            <tr>
+                                <td>Shipping</td>
+                                <td>Inside Dhaka: ৳60.00</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Total</strong></td>
+                                <td><strong>৳  1,359.00</strong></td>
+                            </tr>
+                           </tfoot>
+                        </table>
+                    </div>
+                    <div class="coupon text-center">
+                        <span><span  id="cupon">Do You have any cupon?</span></span>
+                        <div id="cuponBox">
+                           <div class="row g-0">
+                            <input type="text" placeholder="Your Coupon">
+                            <button type="submit" class="apply_btn">Apply Cupon</button>
+                           </div>
+                        </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ===================================== -->
+    <!--  CHECKOUT PART END -->
+    <!-- ===================================== -->
+
+
+    <!-- ===================================== -->
+    <!--  FOOTER  SECTION START -->
+    <!-- ===================================== -->
+    <div class="footer">
+        <div class="container">     
+            <div class="row">                       
+                <div class="col-xl-2 col-lg-4 col-sm-6 col-xs-12">
+                    <div class="single_footer">
+                        <h4>Navigate</h4>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="shop.html">Shop</a></li>
+                            <li><a href="account.html">Account</a></li>
+                            <li><a href="login.html">Login</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-lg-4 col-sm-6 col-xs-12">
+                    <div class="single_footer single_footer_address">
+                        <h4>Shop</h4>
+                        <ul>
+                            <li><a href="#">White & Black</a></li>
+                            <li><a href="#">Gradient White</a></li>
+                            <li><a href="#">Classic Silver</a></li>
+                            <li><a href="#">Classic Golden</a></li>
+                            <li><a href="#">Classic Blue</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-sm-12 col-xs-12">
+                    <div class="single_footer single_footer_address">
+                        <h4>Address</h4>
+                      <address>
+                        <ul>
+                            
+                            <li><span>GETINCARD</span></li>
+                            <li><span>72/1, D.I.T. Road</span> </li>
+                            <li><span> RH Home Center, Level-3, Suite <br> No-324, Green Road, Farmgate 1215 Dhaka</span></li>
+                            <li><i class='bx bx-phone' ></i><span> Phone: <a href="tel:+01728953211">01728953211</a></span></li>
+                            <li><span><i class='bx bx-envelope ' ></i> Email:</span> <a href="mailto:Info@getincard.com">Info@getincard.com</a> </li>
+                        </ul>
+                      </address>
+                       
+                    </div>
+                                         
+                </div>  
+                <div class="col-xl-4 col-md-12  col-xs-12">
+                    <div class="single_footer single_footer_address px-0">
+                        <h4>Subscribe today</h4>
+                        <div class="signup_form">                           
+                            <form action="#" class="subscribe">
+                                <input type="text" class="subscribe__input" placeholder="Enter Email Address">
+                                <button type="button" class="subscribe__btn"><i class="fas fa-paper-plane"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="social_profile">
+                        <ul>
+                           <li> <a href="" target="_blank" style="--i:#4267B2;"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="" target="_blank" style="--i:#FF0000;"><i class="uil uil-youtube"></i></a></li>
+                            <li><a href="" target="_blank" style="--i:#1DA1F2;"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="" target="_blank" class="instagram_bg"><i class="fab fa-instagram"></i></a></li>
+                            <li><a href="" target="_blank" style="--i:#E60023;"><i class="fab fa-pinterest-p"></i></a></li>
+                            <li><a href="" target="_blank" style="--i:#0072b1;"><i class="fab fa-linkedin-in"></i></a></li>
+                        </ul>
+                    </div>                          
+                </div>       
+            </div> 
+            <div class="row">
+                <div class="col-lg-12 col-sm-12 col-xs-12">
+                    <p class="copyright text-light">Copyright © 2022 <a href="https://getinconnect.com" target="_blank">GETINCARD</a></p>
+                </div>                
+            </div>                
+        </div>
+    </div>
+    <!-- ===================================== -->
+    <!--  FOOTER  SECTION END -->
+    <!-- ===================================== -->
+
+
+
+
+
+    <!-- ==========JS HERE========== -->
+    <!-- ==========COUNTERUP JS LINK ========== -->
+
+    <!-- ==========MAIN JQUREY LINK========== -->
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+
+    <!-- ==========BOOTSTARP JS LINK========== -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+    <!-- ==========COUNTERUP JS LINK ========== -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+    <script src="https://bfintal.github.io/Counter-Up/jquery.counterup.min.js"></script>
+    <!-- ==========SWIPER SLIDER JS ========== -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <!-- ==========BOXICONS  JS========== -->
+    <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
+    <!-- ==========LORDICONS  JS========== -->
+    <script src="https://cdn.lordicon.com/pzdvqjsp.js"></script>
+
+    <!-- ==========GLIGHTBOX JS LINK ========== -->
+    <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+    <!-- ==========CUSTOM JS ========== -->
+    <script src="js/app.js"></script>
+    <script>
+        // GLightbox();
+    </script>
+</body>
+
+</html>

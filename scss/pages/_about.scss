@@ -1,0 +1,181 @@
+#about_hero 
+{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    &::before 
+    {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image:linear-gradient($dark-color-8, $primary-color-1), url("../../images/about_hero-bg.webp");
+        background-size: cover;
+        background-position: 100% 100%;
+        z-index: -1;
+    }
+    .about_hero-content 
+    {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        @include transform(translateY(-50%));
+        z-index: 10;
+        text-align: center;
+        width: 100%;
+        h1 
+        {
+            font-size: 3.5rem; 
+            font-size: clamp(1rem, 1rem + 5vw , 4rem);
+        }
+        h2 
+        {
+            font-size: clamp(1rem, 1rem + 1vw , 2rem);
+            padding: 0 0.5rem;
+            margin-bottom: 1rem;
+
+        }
+        h3 
+        {
+            font-size: clamp(1rem, 1rem + 2vw , 1.2rem);
+            padding: 0 0.5rem;
+        }
+        h2 , h3
+        {
+            color: $light-color;
+            text-align: center;
+
+        }
+    }
+}
+
+#about_us 
+{
+    position: relative;
+    width: 100%;
+    height: 50rem;
+    background:$light-color;
+    &::after 
+    {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-image: url("../../images/about-hero.webp");
+        background-size: cover;
+        background-position: right bottom;
+        opacity:0.2; 
+        width: 100%;
+        height: 100%;
+    }
+    .about_content 
+    {
+        position: absolute;
+        top: 40%;
+        @include transform(translateY(-40%));
+        z-index: 10;
+        max-width: 50rem;
+        h1 
+        {
+            color: $primary-color;
+        }
+        h2 
+        {
+            color: $dark-color-8;
+        }
+        p 
+        {
+            font-size: 1.2rem;
+            padding-right: 1.5rem;
+        }
+    }
+}
+
+#company_dream 
+{
+    position: relative;
+    padding-top:8rem;
+    background:linear-gradient($dark-color-4,$dark-color-8);
+    height: 50vh;
+    &::after 
+    {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("../../images/company-bg.webp");
+        background-size: cover;
+        background-position: center center;
+        z-index: -1;
+    }
+    .nav 
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    .nav-tabs 
+    {
+        border:none;
+        gap: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      
+    }
+    .tab_btn.active 
+    {
+        background: none;
+        color: $light-color;
+        border-bottom: 0.2rem  solid $light-color;
+    }
+  
+}
+#myTabContent 
+{
+    padding: 5rem 0;
+    text-align: center;
+    max-width: 40rem;
+    margin: 0 auto;
+    p 
+    {
+        color: $light-color !important;
+        text-align: center !important;
+        line-height: 2;
+        font-size: 1.2rem;
+    }
+}
+
+
+#client_part 
+{
+    position: relative;
+  
+        
+        .logoBx 
+        {
+            position: relative;
+            cursor: pointer;
+            filter: grayscale(0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 5rem;
+            margin: 5rem 0;
+            &:hover img 
+            {
+                filter: grayscale(1);
+               @include transform(scale(1.1));
+            }
+            img 
+            {
+                width: 100%;
+            }
+        }
+    
+}

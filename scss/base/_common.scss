@@ -1,0 +1,71 @@
+.flex 
+{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.flex_center 
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.flex_content 
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.g-2 
+{
+    gap: 20px;
+}
+
+.fix-top 
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+.white-shape 
+{
+ position: absolute;
+ bottom: 0;
+ width: 100%;
+}
+section 
+{
+    padding: 5rem 0;
+}
+
+.section_title 
+{
+    font-size: clamp(1.5rem, 2.5vw, 2.5rem); 
+    text-align: center;
+    color: $secondary-color;
+    
+}
+.section_subtitle 
+{
+    font-size: clamp(1rem, 2vw, 1.6rem); 
+    font-weight: 500;
+    margin-bottom: 6rem;
+    text-align: center;
+    &.white-stroke 
+    {
+        color: $light-color;
+    }
+  
+}
+.title 
+{
+    font-size: clamp(1rem, 1.5vw, 2rem); 
+    font-weight: 700;
+    color: $primary-color;
+    @extend .flex;
+    align-items: center;
+}
+

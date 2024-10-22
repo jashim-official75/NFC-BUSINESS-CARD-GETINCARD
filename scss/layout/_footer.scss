@@ -1,0 +1,270 @@
+.footer {
+    background: $secondary-color;
+    padding-top: 5rem;
+    padding-bottom: 2rem;
+
+    .single_footer {
+        h4 {
+            position: relative;
+            color: $light-color;
+            margin-top: 0;
+            margin-bottom: 3rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 1.5rem;
+            &::after 
+            {
+             position: absolute;
+             content: '';
+             bottom: -1rem;
+             left: 0;
+             width: 5rem;
+             height: 0.1rem;
+             background: $light-color;
+            }
+            &::before 
+            {
+             position: absolute;
+             content: '';
+             bottom: -0.6rem;
+             left: 0;
+             width: 10rem;
+             height: 0.1rem;
+             background: $light-color;
+            }
+        }
+
+        p {
+            color: $light-color;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+
+            li {
+                a {
+                    color: $light-color-8;
+                    -webkit-transition: all 0.3s ease 0s;
+                    transition: all 0.3s ease 0s;
+                    line-height: 2rem;
+                    font-size: 1rem;
+                    text-transform: capitalize;
+
+                    &:hover {
+                        color: $light-color;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+        &_address
+        {
+            ul 
+            {
+                li 
+                {
+                    color: $light-color;
+                    span 
+                    {
+                        font-weight: 400;
+                       color:$light-color;
+                       line-height: 1rem;
+                    }
+                }
+            }
+        }
+    }
+    .contact_social 
+    {
+        ul 
+        {
+            list-style: outside none none;
+            margin: 0;
+            padding: 0;
+        }
+    }
+    .subscribe 
+    {
+        display: block;
+        position: relative;
+        margin-top: 1.5rem;
+        width: 100%;
+        ::placeholder 
+            {
+                color: $light-color-6;
+            }
+        &__input 
+        {
+            background-color: $light-color-1;
+            border:  0.1rem solid $light-color-4;
+            outline: 0;
+            @include border-radius(0.5rem);
+            color: $light-color;
+            display: block;
+            font-size: 1rem;
+            font-weight: 400;
+            height: 4rem;
+            letter-spacing: 0.4px;
+            margin: 0;
+            padding: 0 5rem 0 1rem;
+            width: 100%;
+            &:focus 
+
+            {
+                border-color: $light-color;
+            }
+        }
+        &__btn 
+        {
+            background-color: transparent;
+            border-radius: 0 2.5rem 2.5rem 0;
+            color: $secondary-color;
+            cursor: pointer;
+            display: block;
+            font-size: 2rem;
+            height: 4rem;
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 4rem;
+             i 
+             {
+                transition: all 0.3s ease 0s;
+                color: $light-color-6;
+             }
+             &:hover 
+             {
+                i 
+                {
+                    color: $light-color;
+                }
+             }
+        }
+        button 
+        {
+            padding: 0;
+            border: none;
+            background-color: transparent;
+            -webkit-border-radius: 0;
+            border-radius: 0;
+        }
+    }
+
+    .social_profile 
+    {
+        margin-top: 2rem;
+        ul 
+        {
+            list-style: outside none none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            li 
+            {
+                list-style: none;
+                float: left;
+                a 
+                {
+                    text-align: center;
+                    border: 0px;
+                    text-transform: uppercase;
+                    transition: all 0.3s ease 0s;
+                    background: var(--i);
+                    color: $light-color;
+                    @include border-radius(5rem);
+                    @extend .flex_center;
+                    width: 4rem;
+                    height: 4rem;
+                    border: 0.1rem solid $primary-color;
+                    &.instagram_bg {
+                        background: linear-gradient(29.61deg, rgb(243, 131, 52) 0%, rgb(218, 46, 125) 50.39%, rgb(107, 84, 198) 100%);
+                    }
+                    i 
+                    {
+                        font-size: 1.6rem;
+                    }
+                    &:hover 
+                    {
+                        background: $secondary-color;
+                        color: $light-color;
+                        border-color:$light-color-4;
+                    }
+                }
+            }
+        }
+    }
+
+    .copyright 
+    {
+        margin-top: 3rem;
+        padding-top: 2rem;
+        color: $light-color;
+        font-size: 1rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.4);
+        text-align: center;
+        a 
+        {
+            color: $light-color-8;
+            transition: all 0.2s ease 0s;
+            
+            &:hover 
+            {
+                color: $light-color;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+/*END FOOTER SOCIAL DESIGN*/
+
+@media only screen and (max-width:768px) {
+    .single_footer {
+        margin-bottom: 30px;
+    }
+}
+
+@media only screen and (max-width:768px) {
+    .subscribe__input {
+        padding: 0 50px 0 20px;
+       
+    }
+}
+
+
+
+
+
+@media only screen and (max-width:768px) {
+    .subscribe__btn {
+        right: 0px;
+    }
+}
+
+
+
+
+@media only screen and (max-width:768px) {
+    .social_profile ul li a {
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+@media only screen and (max-width:480px) {
+    .social_profile ul li a {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+    }
+}
+
+
+
+
+

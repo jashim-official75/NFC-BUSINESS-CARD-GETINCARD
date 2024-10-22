@@ -1,0 +1,65 @@
+header 
+{
+    position: relative;
+  
+}
+
+.menubar 
+{
+    height: 5rem;
+    padding: 2rem 0;
+   @include transition(0.5s ease-in-out);
+    &.sticky 
+    {
+        position: fixed;
+        background: $dark-color;
+        @include box-shadow($shadow);
+        padding: 0 0;
+        z-index: 5000;
+        transform: translateY(0);
+    }
+}
+.sticky nav ul li a 
+{
+    color: $light-color;
+}
+.sticky .count_number  
+{
+    background: $light-color;
+    color: $dark-color;
+}
+.sticky .cart_part:hover  .count_number
+{
+    background: $secondary-color;
+    color: $light-color;
+}
+
+.hero_content 
+{
+    position: absolute;
+    left: 16%;
+    color: $light-color;
+    
+}
+
+.hero_inner 
+{
+    display: flex;
+    align-items: center; 
+    height: 100vh;
+    background-image: url("../../images/hero-banner.jpg");
+    // background-image: url("../../images/pexels-pixabay-50987.jpg");
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    background-size: cover;
+    background-position: center center;
+}
+
+.hero_img 
+{
+    img 
+    {
+        width: 800px;
+    }
+}

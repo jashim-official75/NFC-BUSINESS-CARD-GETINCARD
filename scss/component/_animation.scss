@@ -1,0 +1,45 @@
+.pop
+{
+    @include animation(pop 0.2s  linear forwards);
+}
+
+@include keyframes(pop)
+{
+    0%{
+        @include transform(scale(1));
+    }
+    50% {
+        @include transform(scale(1.1));
+    }
+   
+    100% {
+        @include transform(scale(1));
+    }
+}
+
+
+.glow 
+{
+    @include animation(glow 1500ms ease-out infinite);
+}
+@include keyframes(glow)
+{
+    // 0%,100%{
+    //     @include box-shadow(0 0 0 0rem $primary-color-1 ,0 0 0 0rem $primary-color-1);
+    // }
+  
+    // 50%,20% {
+    //     @include box-shadow(0 0 0 0.5rem $primary-color-1 ,0 0 0 0.8rem $primary-color-1);
+    // }
+    0%,20% {
+        @include transform(scale(1));
+        opacity: 1;
+      }
+      100% {
+        @include transform(scale(2.5));
+        opacity: 0;
+      }
+}
+
+
+

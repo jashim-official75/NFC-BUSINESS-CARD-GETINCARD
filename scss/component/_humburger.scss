@@ -1,0 +1,47 @@
+.humburger {
+    position: relative;
+    background-color: $light-color-2;
+    height: 3.5rem;
+    width: 3.5rem;
+    @include border-radius(50%);
+    display: none;
+    padding: 1rem;
+    cursor: pointer;
+    z-index: 2000;
+    @include transform(scale(0.8));
+    @include transition(0.5s ease-out);
+    &:active ,
+    &:focus 
+    {
+        @include box-shadow(0 0 0 0.2rem $light-color-4);
+        @include transition(0.5s ease-out);
+    }
+  }
+  .humburger .l1,.humburger .l2,.humburger .l3 {
+    position: absolute;
+    display: block;
+    margin: auto;
+    top: 48%;
+    left: 20%;
+    height: 3px;
+    width: 60%;
+    background-color: $light-color;
+    transition: all .2s ease-out;
+  }
+  .humburger .l1 {
+    top: 30%;
+  }
+  .humburger .l3 {
+    top: 66%;
+  }
+  .humburger.active .l1 {
+    transform: rotate(45deg);
+    top: 48%;
+  }
+  .humburger.active .l2{
+    opacity: 0;
+  }
+  .humburger.active .l3 {
+    transform: rotate(-45deg);
+    top: 48%;
+  }

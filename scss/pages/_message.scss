@@ -1,0 +1,117 @@
+#message_preview 
+{
+    position: relative;
+    padding: 6rem 1.5rem 0 1.5rem;
+  .message_popup 
+  {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: none;
+    height: 100vh;
+    background: $dark-color-6;
+    .inner_message 
+    {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        @include transform(translate(-50%,-50%));
+        max-width: 50rem;
+        background: $primary-color;
+        overflow: auto;
+        padding: 1rem;
+        h3 
+        {
+            color: $light-color;
+            margin-bottom: 0;
+        font-size: clamp( 1rem , 2vw , 1.4rem);
+        }
+        p 
+        {
+            color: $light-color-6 !important;
+        }
+        #close 
+        {
+            padding: 0.8rem 2rem;
+            border: 0;
+            outline: 0;
+            margin: 0 auto ;
+            @include border-radius(0.5rem);
+            background: $light-color-2;
+            border: 0.1rem solid $light-color;
+            color: $light-color;
+            display: block;
+            cursor: pointer;
+            &:hover 
+            {
+                background: $secondary-color;
+            }
+        }
+    }
+  }
+    h1 
+    {
+        font-size: clamp(1rem , 2vw , 1.6rem);
+        color: $light-color !important;
+    }
+    .message_table 
+    {
+        background: $primary-color;
+        width: 100%;
+        color: $light-color;
+        thead 
+        {
+            th 
+            {
+                border: 0.1rem solid $light-color-1;
+                padding: 1rem;
+                font-size: 2rem;
+            }
+        }
+        tbody 
+        {
+            td 
+            {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 2rem;
+                vertical-align: middle;
+                border-bottom: 2px solid $light-color-1;
+                border-top: 1px solid $dark-color-1;
+                p 
+                {
+                    margin-bottom: 0;
+                    color: $light-color !important;
+                    flex: 1;
+                }
+                #view_message ,  #close
+                {
+                    padding: 0.5rem 1rem;
+                    border: 0;
+                    outline: 0;
+                    margin-right: 2rem;
+                    @include border-radius(0.5rem);
+                    background: $light-color-2;
+                    border: 0.1rem solid $light-color;
+                    color: $light-color;
+                    &:hover 
+                    {
+                        background: $secondary-color;
+                    }
+                }
+                .trash 
+                {
+                    font-size: 1.5rem;
+                    color: $light-color-6;
+                    cursor: pointer;
+                    &:hover 
+                    {
+                        color: $light-color;
+                    }
+                }
+            }
+        }
+    }
+}

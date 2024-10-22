@@ -1,0 +1,413 @@
+p.active {
+    color: $light-color !important;
+}
+
+.theme-dark {
+    background: $dark-color !important;
+}
+
+.profile_wrapper {
+    position: relative;
+    width: 425px;
+    height: 720px;
+    .share_profile 
+    {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: none;
+        padding: 1rem;
+        height: 100%;
+        background: $dark-color-6;
+        .share_modal 
+        {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            background: $light-color;
+            width: 90%;
+            height: 90%;
+        
+            h3 
+            {
+                font-size: 1.6rem;
+                font-weight: 700;
+                color: $dark-color;
+                margin-bottom: 0;
+                padding: 1rem;
+                border-bottom: 1px solid $dark-color-1;
+
+            }
+            p 
+            {
+                font-size: 1.2rem;
+                font-weight: 700;
+                text-align: center;
+                color: $dark-color;
+                margin-bottom: 0;
+                padding: 1rem;
+
+            }
+            .share_platform 
+            {
+                ul 
+                {
+                    display: flex;
+                    justify-content: center;
+                    margin: 0;
+                    flex-wrap: wrap;
+                    padding: 0;
+                    gap: 1rem;
+                    width: 60%;
+                    margin:2rem auto;
+                    li 
+                    {
+                        #icon
+                        {
+                            width: 3.5rem;
+                            height: 3.5rem;
+                            @extend .flex_center;
+                            flex-wrap: wrap;
+                            border:1px solid $primary-color;
+                            font-size: 1.5rem;
+                            color: $dark-color;
+                            @include border-radius(0.5rem);
+                            &:hover 
+                            {
+                                background: $primary-color;
+                                color: $light-color;
+                            }
+                        }
+                    }
+                }
+            }
+            .close_model 
+            {
+                position: absolute;
+                top: -0.5rem;
+                right: -0.5rem;
+                font-size: 2rem;
+                background: $secondary-color;
+                cursor: pointer;
+                width: 2.5rem;
+                height: 2.5rem;
+                @extend .flex_center;
+                color: $light-color;
+                @include border-radius(0.5rem );
+                &:hover 
+                {
+                    background: $dark-color;
+                    color: $light-color-6;
+                }
+            }
+        }
+    }
+    .qrcode
+    {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: none;
+        width: 100%;
+        height: 100%;
+        background: $dark-color;
+        color: $light-color;
+        @include transition(0.5s ease);
+     
+        img 
+        {
+            width: 80%;
+            margin: 5rem auto 0;
+            display: block;
+        }
+        h3 
+        {
+            font-size: 1.6rem;
+            text-align: center;
+            color: $light-color;
+            margin-bottom: 0;
+            padding: 1rem;
+        }
+        p 
+        {
+            color: $light-color !important;
+            text-align: center;
+            
+        }
+        .close_qr 
+        {
+            position: absolute;
+            top: 0rem;
+            right: 1rem;
+            font-size: 3rem;
+            color: $light-color-6;
+            cursor: pointer;
+        }
+    }
+}
+
+.wrapper {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: $primary-color;
+    @extend .flex_center;
+
+    .profile_wrapper {
+        .profile_card {
+            position: absolute;
+            top: 0;
+            left: 0;
+            box-sizing: border-box;
+            text-align: center;
+            width: 100%;
+            background: $light-color-1;
+            height: 100%;
+            overflow-y: scroll;
+
+            &::-webkit-scrollbar {
+                width: 0 !important;
+            }
+
+            .profile_card-header_top {
+                 display: flex;
+                 align-items: center;
+                justify-content: space-between;
+                background: #fff1;
+                padding: 1rem;
+                border-bottom: 0.1rem solid $light-color-1;
+
+                i {
+                    color: $light-color;
+                    cursor: pointer;
+                }
+
+                .roundbox {
+
+                    @extend .flex_center;
+                    gap: 0.5rem;
+                    text-transform: uppercase;
+                    color: #fff;
+                    border: 0.1rem solid $light-color-2;
+                    height: 3rem;
+                    width: 3rem;
+                    text-align: center;
+                    border-radius: 5rem;
+                    background: $light-color-1;
+                    cursor: pointer;
+                    margin-left: 1rem;
+                    @include transition(0.3s ease);
+
+                    &:hover {
+                        background: $dark-color-4;
+                    }
+
+                    i {
+                        font-size: 1.2rem;
+                        margin-top: 0.2rem;
+                    }
+
+                 
+                }
+            }
+            #key {
+                margin-left: 0 !important;
+            }
+
+            .profile_card-header_top .share_option {
+                display: flex;
+            }
+        }
+    }
+
+    .header_part {
+        position: relative;
+
+        .profile_img {
+            position: relative;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+
+            a {
+                img {
+                    width: 10rem;
+                    height: 10rem;
+                    position: absolute;
+                    object-position: top 100%;
+                    top: 100%;
+                    object-fit: cover;
+                    border-radius: 50%;
+                    @include box-shadow(0 0.5rem 1rem $dark-color-1, 0 0 0 0.2rem $light-color-4);
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+        }
+
+        .cover_header {
+            width: 100%;
+            height: 100%;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+    .profile_title {
+        padding-top: 6rem;
+
+        h2 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            text-align: center;
+            color: #fff;
+            margin-bottom: 0.4rem;
+        }
+
+        h3 {
+            color: #f1f1f1;
+            text-transform: uppercase;
+            font-weight: 500;
+            font-size: 1.2rem;
+            letter-spacing: 1px;
+            text-align: center;
+        }
+
+        .line {
+            position: relative;
+            max-width: 350px;
+            height: 0.1rem;
+            @include box-shadow(0 0.1rem 0 0 $dark-color-1);
+            background: $light-color-1;
+            margin: 1rem auto;
+        }
+
+        .desc {
+            max-width: 23rem;
+            margin: auto;
+
+            p {
+                color: $light-color-8 !important;
+                line-height: 1.5;
+                font-size: 1rem;
+            }
+
+        }
+
+        #holder {
+            font-size: 1rem;
+            display: block;
+            margin-top: 0.4rem;
+            text-transform: capitalize;
+        }
+    }
+
+    .connect_btns {
+        @extend .flex_center;
+        margin-top: 1rem;
+
+        .button {
+            padding: 0.8rem 1.5rem;
+            display: inline-block;
+            border: 0.15rem solid $light-color-1;
+            text-decoration: none;
+            color: $dark-color-8;
+            font-weight: 600;
+            text-transform: uppercase;
+            background: #fff;
+            margin-right: 1rem;
+            transition: all 0.2s ease;
+            border-radius: 5rem;
+        }
+
+        .save_btn:hover {
+            color: $dark-color-8 !important;
+            background: #fff !important;
+        }
+
+        .save_btn,
+        .connect_btn:hover {
+            background: $light-color-1 !important;
+            color: #fff !important;
+            border-color: $light-color-4;
+        }
+
+    }
+
+    .scoail_meadia {
+        padding: 2rem 0;
+
+        ul {
+            margin: 0;
+            padding: 0;
+
+            li {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 1rem;
+
+                a {
+                    background: $dark-color-2;
+                    width: 60px;
+                    height: 60px;
+                    line-height: 60px;
+                    color: #fff;
+                    font-size: 25px;
+                    border-radius: 50%;
+                    @include box-shadow(0 0 0 0.2rem $light-color-1);
+                    display: inline-block;
+
+                    &:hover {
+                        background: $dark-color-6;
+                    }
+                }
+            }
+        }
+    }
+
+    .address_info {
+        position: relative;
+        padding: 0 0 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        ul {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 100%;
+
+            li {
+                a {
+                    color: #fff;
+                    text-decoration: none;
+                    font-size: 14px;
+                    font-weight: 300;
+                    display: block;
+                    margin: 1.5rem 0 0 1.5rem;
+
+                    i {
+                        font-size: 20px;
+                        margin-right: 1rem;
+                    }
+                }
+            }
+        }
+    }
+
+
+}
